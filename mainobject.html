@@ -3,21 +3,40 @@
 
 <head>
     <title>ClassMates</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/general.css">
+    <link rel="stylesheet" href="css/mainobject.css">
+
     <!-- <link href="/favicon.ico" type="image/x-icon" rel="icon" /> -->
 
 </head>
 
 <body>
-    <header>
+    <header class="wrapper">
         <a href="#" id="logo"></a>
+        <input type="text" name="searchItems" id="searchBar" placeholder="Search students, classes, reports...">
+        <button tpye="submit" value="Search" class="search-btn">Search</button>
+        <div id="userData">
+            <p id="nameGreeting">Hello, Ron Azulai</p>
+            <p id="time">07:52</p>
+        </div>
     </header>
+
     <nav>
-        <a href="#"><p>Dashboard</p></a>
-        <a href="#" id="classestab"><p>Classes</p></a>
-        <a href="#"><p>Pupils</p></a>
-        <a href="#"><p>Reports</p></a>
-        <a href="#"><p>Settings</p></a> 
+        <a href="#">
+            <p>Dashboard</p>
+        </a>
+        <a href="#" class="current">
+            <p>Classes</p>
+        </a>
+        <a href="#">
+            <p>Pupils</p>
+        </a>
+        <a href="#">
+            <p>Reports</p>
+        </a>
+        <a href="#">
+            <p>Settings</p>
+        </a>
     </nav>
 
     <ul id="breadcrumb">
@@ -31,17 +50,26 @@
         <div id="sideboxes">
             <aside>
                 <p id="classinfo">
-                    math class<br>
-                    1st grade <br>
-                    every tuesday<br>
-                    10-11am <br>
-                    classrom enviornment <br>
-                    interaction: allowed <br>
-                    avatar change: allowed <br>
+
+                    math class
+                    <!-- <?php echo $_get["className"] php?> --><br>
+                    1st grade
+                    <!-- <?php echo $_get["grade"] php?> --><br>
+                    every tuesday
+                    <!-- <?php echo $_get["day"] php?> --><br>
+                    10-11am
+                    <!-- <?php echo $_get["startTime"] . "-" .$_get["endTime"]  php?> --><br>
+                    classrom enviornment
+                    <!-- <?php echo $_get["enviorment"] php?> --><br>
+                    interaction: allowed
+                    <!-- <?php echo $_get["interaction"] php?> --><br>
+                    avatar change: allowed
+                    <!-- <?php echo $_get["avatarChage"] php?> --><br>
                 </p>
             </aside>
             <aside>
                 <h2>Student Alerts</h2>
+                <!--PHP Alerts-->
                 <p>Hila from 3rd grade missed 3 lessons</p>
             </aside>
         </div>
@@ -49,8 +77,47 @@
         <section id="classroom"></section>
 
         <section id="studentsinfo">
+            <!-- <?php foreach($_GET["students"] as student)
+                    echo (Add Student) php?> -->
             <h2>Math 1st Grade Students</h2>
+
+            <div>
+                <section id="hilaisraeli">
+                    <select>
+                        <option selected>Hila Israeli</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                    </select>
+                </section>
+
+                <section id="ilancohen">
+                    <select>
+                        <option selected>Ilan cohen</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                    </select>
+                </section>
+
+                <section id="emilycohen">
+                    <select>
+                        <option selected>Emily Cohen</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                    </select>
+                </section>
+            </div>
+
+            <div id="addstudent">
+                <section> 
+                    <section>
+                    <p>Add student</p></section>
+                </section>
+            </div>
         </section>
+
     </main>
 
 

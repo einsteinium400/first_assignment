@@ -1,0 +1,171 @@
+/* MAIN OBJECT PAGE */
+
+#classestab{
+    background-color:#FFC40D ;
+}
+
+
+main{
+    width:1050px;
+    height:480px;
+    position: relative;
+    left:70px;
+    top:20px;
+    display:flex;
+    justify-content: space-between;
+}
+
+aside{
+    position: relative;
+    font-size: 14px;
+    text-align: center;
+    width: 282px;
+    height: 185px;
+    background-color: rgba(196, 196, 196, 0.27);
+}
+
+main>div>aside>p{
+    position:relative;
+    top:6px;
+}
+
+#classinfo{
+    width: 282px;
+    height: 185px;
+}
+
+#sideboxes{
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    height:450px;
+    width:282px;
+}
+
+
+
+h2{
+    font-size: 16px;
+}
+
+#classroom{
+    position: relative;
+    background-image: url(../images/class.png);
+    width:418px;
+    height:448px;
+}
+
+#studentsinfo{
+    width:335px;
+    height:411px;
+    background-color: hsla(0, 0%, 77%, 0.4);
+    text-align: center;
+}
+
+
+/*Dashboard page*/
+
+.selected{
+    background-color:#FFC40D ;
+}
+
+header{
+    position:relative;
+}
+.search-btn{
+    width: 107px;
+    height: 26px;
+    background: rgba(255, 196, 13, 0.7);
+    opacity: 0.8;
+    border-radius: 3px;
+    color:black;
+    align-items: center;
+    text-align: center;
+    border: 0px;
+    position:absolute;
+    top:113px;
+    left:567px;
+}
+#searchBar{
+    width: 372px;
+    height: 31px;
+    border: 0px;
+    background: #FFFFFF;
+    border-radius: 32px;
+    position:absolute;
+    top:111px;
+    left:183px;
+}
+
+#nameGreeting{
+    position:absolute;
+    bottom:0px;
+    right:102px;
+    font-size: 20px;
+}
+#time{
+    position:absolute;
+    bottom:0px;
+    right:0px;
+    font-size: 30px;
+}
+
+/* #studentsinfo{
+    display:flex;
+
+} */
+
+
+#studentsinfo>div{
+    display: flex;
+    /* width:170px; */
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+}
+
+#studentsinfo>div>section{
+    height:87px;
+    width:70px;
+    background-color:rgb(255, 255, 255, 0.43);
+    /* border-collapse: collapse; */
+
+}
+
+
+
+#studentsinfo>div>section>select,#studentsinfo>div>section>section {
+    background-color:rgb(255, 255, 255, 0.93);
+    width:90px;
+    height:20px;
+    bottom: 0;
+    left: 0;
+    border-radius: 10px;
+    /* margin: 0px auto; */
+    position: relative;
+    top:80px;
+    left:-9px;
+    border-width: 0px;
+    /* text-align: center; */
+    font-size: 12px;
+}
+
+#hilaisraeli{
+    background-image: url(../images/hilaisraeli.png);
+}
+
+#ilancohen{
+    background-image: url(../images/ilancohen.png);
+
+}
+
+#emilycohen{
+    background-image: url(../images/emilycohen.png);
+}
+
+#addstudent{
+    position:relative;
+    top:25px;
+    float:left;
+    left:20px;
+}

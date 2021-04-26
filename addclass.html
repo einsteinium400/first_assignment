@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="css/general.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+
+    <title>Add new class</title>
+</head>
+
+<body>
+    <header class="wrapper">
+        <a href="#" id="logo"></a>
+        <input type="text" name="searchItems" id="searchBar" placeholder="Search students, classes, reports...">
+        <button tpye="submit" value="Search" class="search-btn">Search</button>
+        <div id="userData">
+            <p id="nameGreeting">Hello, Ron Azulai</p>
+            <p id="time">07:52</p>
+        </div>
+    </header>
+        <nav>
+            <a href="#" class="current">
+                <p>Dashboard</p>
+            </a>
+            <a href="#">
+                <p>Classes</p>
+            </a>
+            <a href="#">
+                <p>Pupils</p>
+            </a>
+            <a href="#">
+                <p>Reports</p>
+            </a>
+            <a href="#">
+                <p>Settings</p>
+            </a>
+        </nav>
+
+            <ul id="breadcrumb">
+                <li><a href="#">Dashboard</a></li>
+                <li><a href="#">Classes</a></li>
+                <li>Add class</li>
+            </ul>
+
+    <main class="wrapper">
+
+        <section class="mainArea">
+
+            <h1>Add Class</h1>
+            <section class="mainSection">
+                <!--Place here the main content of the page-->
+                <form action="" method="GET" autocomplete="on" id="addNewClassForm">
+                    <label><p>Classroom name:</p><input type="text" name="className" class="basicInput"></label>
+                    <label><p>Grade:</p><select name="grade" class="basicInput">
+                        <option value="1">1st</option>
+                        <option value="2">2nd</option>
+                        <option value="3">3rd</option>
+                        <option value="4">4th</option>
+                        <option value="5">5th</option>
+                    </select></label>
+                    <label><p>Date:</p><input type="date" name="date" class="basicInput"></label>
+                    <label>
+                        <p>Type:</p>
+                        <p><input type="radio" name="classType">Recursive
+                        <input type="radio" name="classType">Once</p>
+                    </label>
+                    <label><p>Start Time:</p><input type="datetime" name="startTime" class="basicInput"></label>
+                    <label><p>End Time:</p><input type="datetime" name="endTime" class="basicInput"></label>
+                    <p>Enviroment:</p>
+                    <label> 
+                        <p><input type="radio" name="classEnv">Classroom</p>
+                        <p><input type="radio" name="classEnv">Labratory</p>
+                        <p><input type="radio" name="classEnv">Outdoor</p>
+                    </label>
+                    <label><p>Interaction allowed:</p>
+                        <button id="changeInteraction">Show</button>
+                    </label>
+                    <label><p>Avatar change mode:</p><select name="avatarChange" class="basicInput">
+                        <option value="0">Disable</option>
+                        <option value="1">Enable</option>
+                    </select></label>
+                    <label>
+                        <p>Add Students</p><i class="fas fa-user-plus icon24"></i>
+                    </label>
+                    <div class="addBox addBoxStudents"></div>
+                    <label>
+                        <p>Upload files</p><i class="fas fa-folder-plus icon34"></i>
+                    </label>
+                    <div class="addBox addBoxFiles"></div>
+                    <input type="submit" name="submit" class="submitBtn" value="Submit"> 
+
+                </form>
+            </section>
+        </section>
+    </main>
+</body>
+
+</html>

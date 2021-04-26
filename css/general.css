@@ -1,0 +1,142 @@
+
+@font-face {
+    font-family: Alata;
+    src: url(../fonts/Alata-Regular.ttf);
+    font-weight: bold;
+}
+
+ul, li {
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Alata;
+    color:black;
+}
+
+header{
+    max-width: 100%;
+    margin: 0 auto;
+    height:160px;
+    background-color: hsla(0, 0%, 77%, 0.2);
+    display:flex;
+    position: relative;
+}
+
+#logo{
+    background-image:url(../images/logo.png) ;
+    width:222px;
+    height:81px;
+    top:15px;
+    border:5px;
+}
+
+nav{
+    background-color: hsla(0, 0%, 77%, 0.205);
+    display: flex;
+    width: 164px;
+    height: 522px;
+    /* height:100%; */
+    float:left;
+    flex-direction: column;
+}
+nav>a{
+    width:164px;
+    height:80px;
+
+}
+
+nav>a:hover{
+    background-color:#FFC40D ;
+}
+
+nav>a>p{
+    position: relative;
+    left:8px;
+    top:27px;
+}
+
+
+
+#breadcrumb{
+    width:265px;
+    height:19px;
+    display: inline-flex;
+    justify-content:space-between;
+}
+
+main{
+    width:1050px;
+    height:480px;
+    position: relative;
+    margin-left: 2.5%;
+    display:flex;
+}
+
+.search-btn{
+    width: 107px;
+    height: 26px;
+    background: rgba(255, 196, 13, 0.7);
+    opacity: 0.8;
+    border-radius: 3px;
+    color:black;
+    align-items: center;
+    text-align: center;
+    border: 0px;
+    position:absolute;
+    top:113px;
+    left:585px;
+}
+.search-btn:hover{
+    cursor:pointer;
+}
+#searchBar{
+    width: 372px;
+    height: 31px;
+    border: 0px;
+    background: #FFFFFF;
+    border-radius: 32px;
+    position:absolute;
+    top:111px;
+    left:183px;
+    background-image:url(../images/Search_Icon.png); 
+    background-repeat: no-repeat; 
+    background-position: 2px 3px;
+    padding-left: 25px;
+}
+.current{
+    background-color:#FFC40D ;
+}
+
+
+#nameGreeting{
+    position:absolute;
+    bottom:0px;
+    right:102px;
+    font-size: 20px;
+}
+#time{
+    position:absolute;
+    bottom:0px;
+    right:0px;
+    font-size: 30px;
+}
+
+h1{
+    /* position: relative; */
+    margin: 0px auto;
+    width:200px;
+}
+
+#breadcrumb{
+    width:265px;
+    height:19px;
+    display: flex;
+    justify-content:space-between;
+}

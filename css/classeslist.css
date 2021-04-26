@@ -1,0 +1,53 @@
+main{
+    display: flex;
+    justify-content:space-between;
+    flex-wrap: wrap;
+    left:20px;
+    float:left;
+}
+
+main>div{
+     width:400px;
+    height:195px;   
+}
+
+main>div>h2{
+    margin: 0px auto;
+    width:110px
+}
+
+main>div>div{
+    display:flex;
+    justify-content: space-between;
+}
+
+main>div>div>section{
+    background-color: hsla(0, 0%, 77%, 0.1);
+    width:112px;
+    height:170px;
+}
+
+main>div>div>section>div>h3{
+font-size: 14px;
+}
+
+main>div>div>section>div>p{
+    font-size: 12px;
+    margin: auto;
+}
+
+/* main>div>div>section>div{
+    overflow:inherit;
+    height: 100%;
+} */
+
+.lessonimage{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#functionality{
+    width:300px;
+    float:left;
+}

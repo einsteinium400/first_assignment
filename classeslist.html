@@ -3,20 +3,38 @@
 
 <head>
     <title>ClassMates</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/general.css">
+    <link rel="stylesheet" href="css/classeslist.css">
+    <script src="js/classeslistscript.js"></script>
 
 </head>
 
 <body>
-    <header>
+    <header class="wrapper">
         <a href="#" id="logo"></a>
+        <input type="text" name="searchItems" id="searchBar" placeholder="Search students, classes, reports...">
+        <button tpye="submit" value="Search" class="search-btn">Search</button>
+        <div id="userData">
+            <p id="nameGreeting">Hello, Ron Azulai</p>
+            <p id="time">07:52</p>
+        </div>
     </header>
     <nav>
-            <a href="#"><p>Dashboard</p></a>
-            <a href="#" id="classestab"><p>Classes</p></a>
-            <a href="#"><p>Pupils</p></a>
-            <a href="#"><p>Reports</p></a>
-            <a href="#"><p>Settings</p></a> 
+        <a href="dashboard.html">
+            <p>Dashboard</p>
+        </a>
+        <a href="#" class="current">
+            <p>Classes</p>
+        </a>
+        <a href="#">
+            <p>Pupils</p>
+        </a>
+        <a href="#">
+            <p>Reports</p>
+        </a>
+        <a href="#">
+            <p>Settings</p>
+        </a>
     </nav>
 
     <ul id="breadcrumb">
@@ -25,27 +43,195 @@
         <li>Class info</li>
     </ul>
 
-        <h1>Classes list</h1>
+    <h1>Classes list</h1>
+
+    <div id="functionality">
+        <p>
+            <a href="#"> <img src="images/add.png">
+            </a>
+            Add
+            <a href="#"> <img src="images/listview.png">
+            </a>
+        </p>
+
+    </div>
 
     <main>
-
         <div>
             <h2>1st class</h2>
-            <section></section>
-            <section></section>
-            <section></section>
+            <div>
+                <section>
+                    <div>
+                        <h3>&nbsp French class</h3>
+                        <p><img class="lessonimage" src="images/frenchclass.png">
+                            <!-- <br> -->
+                            Sunday<br>12:30-14:00
+                            <br>
+                            &nbsp &nbsp &nbsp &nbsp
+
+                            <a href="#"> <img src="images/info.png">
+                            </a>
+                            info
+                            <br>
+                            &nbsp &nbsp &nbsp
+
+                            <a href="#"> <img src="images/edit.png">
+                            </a>
+                            &nbsp &nbsp &nbsp
+                            <a href="#" class="deleteitem"  > <img src="images/delete.png">
+                            </a>
+
+                            <br>
+                            &nbsp &nbsp &nbsp edit &nbsp &nbsp delete
+                        </p>
+                    </div>
+                </section>
+
+
+                <section>
+                    <div>
+                        <h3>&nbsp English class</h3>
+                        <p><img class="lessonimage" src="images/englishclass.png">
+                            Monday<br>12:30-14:00
+                            <br>
+                            &nbsp &nbsp &nbsp &nbsp
+
+                            <a href="#"> <img src="images/info.png">
+                            </a>
+                            info
+                            <br>
+                            &nbsp &nbsp &nbsp
+
+                            <a href="#"> <img src="images/edit.png">
+                            </a>
+                            &nbsp &nbsp &nbsp
+                            <a href="#" class="deleteitem" > <img src="images/delete.png">
+                            </a>
+
+                            <br>
+                            &nbsp &nbsp &nbsp edit &nbsp &nbsp delete
+                        </p>
+                    </div>
+                </section>
+
+
+                <section>
+                    <div>
+                        <h3>&nbsp Math class</h3>
+                        <p><img class="lessonimage" src="images/mathclass.png">
+                            Tuesday<br>10:00-11:00
+                            <br>
+                            &nbsp &nbsp &nbsp &nbsp
+
+                            <a href="#"> <img src="images/info.png">
+                            </a>
+                            info
+                            <br>
+                            &nbsp &nbsp &nbsp
+
+                            <a href="#"> <img src="images/edit.png">
+                            </a>
+                            &nbsp &nbsp &nbsp
+                             <a href="#" class="deleteitem"  ><img src="images/delete.png"></a>
+<!-- HEREEEEEEEEEEE -->
+                            <br>
+                            &nbsp &nbsp &nbsp edit &nbsp &nbsp delete
+                        </p>
+                    </div>
+                </section>
+            </div>
         </div>
 
         <div>
             <h2>2nd class</h2>
-            <section></section>
+            <div>
+                <section>
+                    <div>
+                        <h3>&nbsp French class</h3>
+                        <p><img class="lessonimage" src="images/frenchclass.png">
+                            Friday<br>12:30-14:00
+                            <br>
+                            &nbsp &nbsp &nbsp &nbsp
+
+                            <a href="#"> <img src="images/info.png">
+                            </a>
+                            info
+                            <br>
+                            &nbsp &nbsp &nbsp
+
+                            <a href="#"> <img src="images/edit.png">
+                            </a>
+                            &nbsp &nbsp &nbsp
+                            <a href="#" class="deleteitem"  > <img src="images/delete.png">
+                            </a>
+
+                            <br>
+                            &nbsp &nbsp &nbsp edit &nbsp &nbsp delete
+                        </p>
+                    </div>
+
+                </section>
+            </div>
         </div>
+
 
         <div>
             <h2>3rd class</h2>
-            <section></section>
-            <section></section>
+
+            <div>
+                <section>
+                    <div>
+                        <h3>&nbsp French class</h3>
+                        <p><img class="lessonimage" src="images/frenchclass.png">
+                            Thursday<br>12:30-14:00
+                            <br>
+                            &nbsp &nbsp &nbsp &nbsp
+
+                            <a href="#"> <img src="images/info.png">
+                            </a>
+                            info
+                            <br>
+                            &nbsp &nbsp &nbsp
+
+                            <a href="#"> <img src="images/edit.png">
+                            </a>
+                            &nbsp &nbsp &nbsp
+                            <a href="#" class="deleteitem"  > <img src="images/delete.png">
+                            </a>
+
+                            <br>
+                            &nbsp &nbsp &nbsp edit &nbsp &nbsp delete
+                        </p>
+                    </div>
+                </section>
+
+
+                <section>
+                    <div>
+                        <h3>&nbsp English class</h3>
+                        <p><img class="lessonimage" src="images/englishclass.png">
+                            Sunday<br>09:00-10:30
+                            <br>
+                            &nbsp &nbsp &nbsp &nbsp
+
+                            <a href="#"> <img src="images/info.png">
+                            </a>
+                            info
+                            <br>
+                            &nbsp &nbsp &nbsp
+                            <a href="#"> <img src="images/edit.png">
+                            </a>
+                            &nbsp &nbsp &nbsp
+                            <a href="#" class="deleteitem"  > <img src="images/delete.png">
+                            </a>
+                            <br>
+                            &nbsp &nbsp &nbsp edit &nbsp &nbsp delete
+                        </p>
+                    </div>
+                </section>
+            </div>
         </div>
+
     </main>
 
 

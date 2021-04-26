@@ -1,0 +1,183 @@
+.wrapper{
+    margin: 0 auto;
+}
+/* MAIN OBJECT PAGE */
+
+aside{
+    position: relative;
+    font-size: 14px;
+    text-align: center;
+    width: 282px;
+    height: 185px;
+    background-color: rgba(196, 196, 196, 0.27);
+}
+
+main>div>aside>p{
+    position:relative;
+    top:6px;
+}
+
+
+#sideboxes{
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    height:450px;
+    width:282px;
+}
+
+
+#classroom{
+    position: relative;
+    background-image: url(../images/class.png);
+    width:418px;
+    height:448px;
+}
+
+#studentsinfo{
+    width:335px;
+    height:411px;
+    background-color: hsla(0, 0%, 77%, 0.4);
+    text-align: center;
+}
+
+
+/*Dashboard page*/
+
+
+.mainArea{
+    display: flexbox;
+    padding-left:12px;
+}
+.mainArea h1{
+    padding-left: 5px;
+}
+/* CSS attributes for the dynamic main Section*/ 
+.mainSection{
+    width: 1000px;
+    max-height:554px;
+    display:flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    font-size: 14px;
+    /* padding-left: 34px; */
+    line-height: 40px;
+}
+.mainSection>div{
+    margin-right: 62px;
+}
+/*Schedule list css attributes*/
+.viewMore{
+    color:#037aff;
+    font-size: 16px;
+    margin:0 auto;
+    
+}
+
+/* Icons from font aweasone cdn size change*/
+.icon34{
+    font-size:30px;
+    line-height: 40px;
+}
+.icon24{
+    font-size:24px;
+    margin-left: 7px;
+}
+i:hover{
+    cursor: pointer;
+}
+
+/*Taskboard css attributes*/
+#taskBoard ul li,#pupilsAlerts ul li{
+    width: 605px;
+    height:40px;
+    display:flex;
+    justify-content: space-between;
+    font-size: 14px;
+    padding-left: 15px;
+    line-height: 40px;
+}
+/*Schedule css attributes*/
+
+#schedule ul li{
+    width:389px;
+    height:32px;
+    display:flex;
+    justify-content: space-between;
+    font-size: 14px;
+}
+#schedule ul li p:first-child{
+    margin-right: 8px;
+}
+#schedule ul li p{
+    display:inline-flex;
+}
+.classStartBtn{
+    width:52px;
+    height:21px;
+    font-size:14px;
+    align-content: center;
+    border-radius: 3px;
+    border-width: 0px;
+    margin-top: 1px;
+    background-color: #ffc40d;
+}
+.classStartBtn:hover{
+    cursor: pointer;
+}
+.btnNotActive{
+    opacity: 50%;
+}
+.daysRow{
+    background-color: #ffc40d;
+    display:flex;
+    justify-content: space-between;
+    line-height: 30px;
+}
+.boardHeadline{
+    background-color:rgba(255, 195, 15, 0.5) ;
+    line-height: 30px;
+}
+
+/* CSS attributes for the Add form*/ 
+#addNewClassForm{
+    max-height: 504px;
+    display:flex;
+    flex-direction: column;
+    flex-wrap: wrap;   
+}
+#addNewClassForm > label{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width:382px;
+    height:32px;
+}
+.basicInput{
+    margin:auto 0;
+    height:18px;
+    width:185px;
+
+}
+.addBox{
+    border-width: 5px;
+    border:0.5px solid rgba(0, 0, 0, 0.15);
+}
+.addBoxStudents{
+    width:457px;
+    height:193px;
+}
+.addBoxFiles{
+    width:454px;
+    height:95px;
+}
+.submitBtn{
+    width:208px;
+    height:48px;
+    background-color: rgba(255, 195, 15, 0.8);
+    border-width: 0px;
+    border-radius: 18px;
+    font-size: 18px;
+    margin-left: 127px;
+    margin-top:32px;
+}
