@@ -4,7 +4,9 @@
     src: url(../fonts/Alata-Regular.ttf);
     font-weight: bold;
 }
-
+.wrapper{
+    margin: 0 auto; /* Added margin for general use */
+}
 ul, li {
     list-style: none;
 }
@@ -19,137 +21,406 @@ a{
     font-family: Alata;
     color:black;
 }
+/*Full screen*/
+@media only screen and (min-width:1280px) {
+    
 
-header{
-    max-width: 100%;
-    margin: 0 auto;
-    height:160px;
-    background-color: hsla(0, 0%, 77%, 0.2);
-    display:flex;
-    position: relative;
-}
+    header{
+        max-width: 100%;
+        margin: 0 auto;
+        height:160px;
+        background-color: hsla(0, 0%, 77%, 0.2);
+        display:flex;
+        position: relative;
+    }
 
-#logo{
-    background-image:url(../images/logo.png) ;
-    width:222px;
-    height:81px;
-    top:15px;
-    border:5px;
-}
+    #logo{
+        background-image:url(../images/logo.png) ;
+        width:222px;
+        height:81px;
+        top:15px;
+        border:5px;
+    }
 
-nav{
-    background-color: hsla(0, 0%, 77%, 0.205);
-    display: flex;
-    width: 164px;
-    height: 522px;
-    /* height:100%; */
-    float:left;
-    flex-direction: column;
-}
-nav>a{
-    width:164px;
-    height:80px;
+    nav{
+        background-color: hsla(0, 0%, 77%, 0.205);
+        display: flex;
+        width: 164px;
+        height: 522px;
+        /* height:100%; */
+        float:left;
+        flex-direction: column;
+    }
+    nav>a{
+        width:164px;
+        height:80px;
 
-}
+    }
 
-nav>a:hover{
-    background-color:#FFC40D ;
-}
+    nav>a:hover{
+        background-color:#FFC40D ;
+    }
 
-nav>a>p{
-    position: relative;
-    left:8px;
-    top:27px;
-}
-
-
-
-#breadcrumb{
-    width:265px;
-    height:19px;
-    display: inline-flex;
-    justify-content:space-between;
-}
-
-main{
-    width:1050px;
-    height:480px;
-    position: relative;
-    margin-left: 2.5%;
-    display:flex;
-}
-
-.search-btn{
-    width: 107px;
-    height: 26px;
-    background: rgba(255, 196, 13, 0.7);
-    opacity: 0.8;
-    border-radius: 3px;
-    color:black;
-    align-items: center;
-    text-align: center;
-    border: 0px;
-    position:absolute;
-    top:113px;
-    left:585px;
-}
-.search-btn:hover{
-    cursor:pointer;
-}
-#searchBar{
-    width: 372px;
-    height: 31px;
-    border: 0px;
-    background: #FFFFFF;
-    border-radius: 32px;
-    position:absolute;
-    top:111px;
-    left:183px;
-    background-image:url(../images/Search_Icon.png); 
-    background-repeat: no-repeat; 
-    background-position: 2px 3px;
-    padding-left: 25px;
-}
-.current{
-    background-color:#FFC40D ;
-}
+    nav>a>p{
+        position: relative;
+        left:8px;
+        top:27px;
+    }
 
 
-#nameGreeting{
-    position:absolute;
-    bottom:0px;
-    right:102px;
-    font-size: 20px;
+
+    #breadcrumb{
+        /*Changed to make fit for any number of items*/
+        width:265px;
+        height:19px;
+        display: inline-flex;
+        justify-content:left;
+    }
+    #breadcrumb>li{
+        margin-right: 12px;
+    }
+
+    main{
+        width:1050px;
+        height:480px;
+        position: relative;
+        margin-left: 2.5%;
+        display:flex;
+    }
+
+    .search-btn{
+        width: 107px;
+        height: 26px;
+        background: rgba(255, 196, 13, 0.7);
+        opacity: 0.8;
+        border-radius: 3px;
+        color:black;
+        align-items: center;
+        text-align: center;
+        border: 0px;
+        position:absolute;
+        top:113px;
+        left:585px;
+    }
+    .search-btn:hover{
+        cursor:pointer;
+    }
+    #searchBar{
+        width: 372px;
+        height: 31px;
+        border: 0px;
+        background: #FFFFFF;
+        border-radius: 32px;
+        position:absolute;
+        top:111px;
+        left:183px;
+        background-image:url(../images/Search_Icon.png); 
+        background-repeat: no-repeat; 
+        background-position: 2px 3px;
+        padding-left: 25px;
+    }
+    .current{
+        background-color:#FFC40D ;
+    }
+
+
+    #nameGreeting{
+        position:absolute;
+        bottom:0px;
+        right:102px;
+        font-size: 20px;
+    }
+    #time{
+        position:absolute;
+        bottom:0px;
+        right:0px;
+        font-size: 30px;
+    }
+
+    h1{
+        /* position: relative; */
+        margin: 0px auto;
+        width:200px;
+    }
+
+    /* Icons from font aweasone cdn size change*/
+    .icon34{
+        font-size:30px;
+        line-height: 40px;
+    }
+    .icon24{
+        font-size:24px;
+        margin-left: 7px;
+    }
+    i:hover{
+        cursor: pointer;
+    }
 }
-#time{
-    position:absolute;
-    bottom:0px;
-    right:0px;
-    font-size: 30px;
+/*Mid screen screen tablet*/
+@media only screen and (min-width:620px) and (max-width:1280px) {
+    
+
+    header{
+        max-width: 100%;
+        margin: 0 auto;
+        height:160px;
+        background-color: hsla(0, 0%, 77%, 0.2);
+        display:flex;
+        position: relative;
+    }
+
+    #logo{
+        background-image:url(../images/logo.png) ;
+        width:222px;
+        height:81px;
+        top:15px;
+        border:5px;
+    }
+
+    nav{
+        background-color: hsla(0, 0%, 77%, 0.205);
+        display: flex;
+        width: 100px;
+        height: 100%;
+         height:100%;
+        float:left;
+        flex-direction: column;
+    }
+    nav>a{
+        width:100px;
+        height:80px;
+
+    }
+
+    nav>a:hover{
+        background-color:#FFC40D ;
+    }
+
+    nav>a>p{
+        position: relative;
+        left:8px;
+        top:27px;
+    }
+
+
+
+    #breadcrumb{
+        /*Changed to make fit for any number of items*/
+        width:265px;
+        height:19px;
+        display: inline-flex;
+        justify-content:left;
+    }
+    #breadcrumb>li{
+        margin-right: 12px;
+    }
+
+    main{
+
+        height:480px;
+        position: relative;
+        margin-left: 2.5%;
+        display:flex;
+    }
+
+    .search-btn{
+        width: 50px;
+        height: 26px;
+        background: rgba(255, 196, 13, 0.7);
+        opacity: 0.8;
+        border-radius: 3px;
+        color:black;
+        align-items: center;
+        text-align: center;
+        border: 0px;
+        position:absolute;
+        top:113px;
+        left:470px;
+    }
+    .search-btn:hover{
+        cursor:pointer;
+    }
+    #searchBar{
+        width: 250px;
+        height: 31px;
+        border: 0px;
+        background: #FFFFFF;
+        border-radius: 32px;
+        position:absolute;
+        top:111px;
+        left:183px;
+        background-image:url(../images/Search_Icon.png); 
+        background-repeat: no-repeat; 
+        background-position: 2px 3px;
+        padding-left: 25px;
+    }
+    .current{
+        background-color:#FFC40D ;
+    }
+
+
+    #nameGreeting{
+        position:absolute;
+        top:12px;
+        right:102px;
+        font-size: 20px;
+    }
+    #time{
+        position:absolute;
+        top:0px;
+        right:0px;
+        font-size: 30px;
+    }
+
+    h1{
+        /* position: relative; */
+        margin: 0px auto;
+        width:200px;
+    }
+
+    /* Icons from font aweasone cdn size change*/
+    .icon34{
+        font-size:30px;
+        line-height: 40px;
+    }
+    .icon24{
+        font-size:24px;
+        margin-left: 7px;
+    }
+    i:hover{
+        cursor: pointer;
+    }
 }
 
-h1{
-    /* position: relative; */
-    margin: 0px auto;
-    width:200px;
-}
+/*Mobile screen*/
+@media only screen and (max-width:620px) {
+    
 
-#breadcrumb{
-    width:265px;
-    height:19px;
-    display: flex;
-    justify-content:space-between;
-}
+    header{
+        max-width: 100%;
+        margin: 0 auto;
+        height:160px;
+        background-color: hsla(0, 0%, 77%, 0.2);
+        display:flex;
+        position: relative;
+    }
 
-/* Icons from font aweasone cdn size change*/
-.icon34{
-    font-size:30px;
-    line-height: 40px;
-}
-.icon24{
-    font-size:24px;
-    margin-left: 7px;
-}
-i:hover{
-    cursor: pointer;
+    #logo{
+        background-image:url(../images/logo.png) ;
+        width:222px;
+        height:81px;
+        top:15px;
+        border:5px;
+    }
+
+    nav{
+        background-color: hsla(0, 0%, 77%, 0.205);
+        display: flex;
+        height:100%;
+        width: 100%;
+        float:left;
+        flex-direction: row;
+    }
+    nav>a{
+        width:80px;
+        height: 20px;
+        font-size: 12px;
+
+    }
+
+    nav>a:hover{
+        background-color:#FFC40D ;
+    }
+
+    nav>a>p{
+        position: relative;
+    }
+
+
+    #breadcrumb{
+        /*Changed to make fit for any number of items*/
+        width:265px;
+        height:19px;
+        display: inline-flex;
+        justify-content:left;
+    }
+    #breadcrumb>li{
+        margin-right: 12px;
+    }
+
+    main{
+
+        height:480px;
+        position: relative;
+        margin-left: 2.5%;
+        display:flex;
+    }
+    #searchBar{
+        width: 250px;
+        height: 31px;
+        border: 0px;
+        background: #FFFFFF;
+        border-radius: 32px;
+        position:absolute;
+        top:111px;
+        left:10px;
+        background-image:url(../images/Search_Icon.png); 
+        background-repeat: no-repeat; 
+        background-position: 2px 3px;
+        padding-left: 25px;
+    }
+    .search-btn{
+        width: 50px;
+        height: 26px;
+        background: rgba(255, 196, 13, 0.7);
+        opacity: 0.8;
+        border-radius: 3px;
+        color:black;
+        align-items: center;
+        text-align: center;
+        border: 0px;
+        position:absolute;
+        top:113px;
+        left:300px;
+    }
+    .search-btn:hover{
+        cursor:pointer;
+    }
+    
+    .current{
+        background-color:#FFC40D ;
+    }
+
+
+    #nameGreeting{
+        position:absolute;
+        top:40px;
+        right:0px;
+        font-size: 14px;
+    }
+    #time{
+        position:absolute;
+        top:0px;
+        right:0px;
+        font-size: 30px;
+    }
+
+    h1{
+        /* position: relative; */
+        margin: 0px auto;
+        width:200px;
+    }
+
+    /* Icons from font aweasone cdn size change*/
+    .icon34{
+        font-size:30px;
+        line-height: 40px;
+    }
+    .icon24{
+        font-size:24px;
+        margin-left: 7px;
+    }
+    i:hover{
+        cursor: pointer;
+    }
 }
