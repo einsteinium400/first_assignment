@@ -63,57 +63,7 @@ h2{
 }
 
 
-/*Dashboard page*/
 
-.selected{
-    background-color:#FFC40D ;
-}
-
-header{
-    position:relative;
-}
-.search-btn{
-    width: 107px;
-    height: 26px;
-    background: rgba(255, 196, 13, 0.7);
-    opacity: 0.8;
-    border-radius: 3px;
-    color:black;
-    align-items: center;
-    text-align: center;
-    border: 0px;
-    position:absolute;
-    top:113px;
-    left:567px;
-}
-#searchBar{
-    width: 372px;
-    height: 31px;
-    border: 0px;
-    background: #FFFFFF;
-    border-radius: 32px;
-    position:absolute;
-    top:111px;
-    left:183px;
-}
-
-#nameGreeting{
-    position:absolute;
-    bottom:0px;
-    right:102px;
-    font-size: 20px;
-}
-#time{
-    position:absolute;
-    bottom:0px;
-    right:0px;
-    font-size: 30px;
-}
-
-/* #studentsinfo{
-    display:flex;
-
-} */
 
 
 #studentsinfo>div{
