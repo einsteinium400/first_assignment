@@ -294,8 +294,6 @@ a{
 
 /*Mobile screen*/
 @media only screen and (max-width:620px) {
-    
-
     header{
         max-width: 100%;
         margin: 0 auto;
@@ -409,7 +407,7 @@ a{
     h1{
         /* position: relative; */
         margin: 0px auto;
-        width:200px;
+        width:100%;
     }
 
     /* Icons from font aweasone cdn size change*/

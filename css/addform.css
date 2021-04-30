@@ -1,60 +1,183 @@
 
 /* CSS attributes for the Add form*/ 
-.mainSection{
-    width:1000px;
-    max-height:554px;
-    display:flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    font-size: 14px;
-    /* padding-left: 34px; */
-    line-height: 20px;
-    margin-left: 14px;
-}
-#addNewClassForm{
-    max-height: 504px;
-    display:flex;
-    flex-direction: column;
-    flex-wrap: wrap;   
-}
-#addNewClassForm > section >label{
-    display:flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width:382px;
-    height:32px;
-}
-.basicInput{
-    margin:auto 0;
-    height:18px;
-    width:185px;
+/*Full screen */
+@media only screen and (min-width:1280px){
+    .mainSection{
+        width:1000px;
+        max-height:554px;
+        display:flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        font-size: 14px;
+        /* padding-left: 34px; */
+        line-height: 20px;
+        margin-left: 14px;
+    }
+    #addNewClassForm{
+        max-height: 504px;
+        display:flex;
+        flex-direction: column;
+        flex-wrap: wrap;   
+    }
+    #addNewClassForm > section >label{
+        display:flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width:382px;
+        height:32px;
+    }
+    .basicInput{
+        margin:auto 0;
+        height:18px;
+        width:185px;
 
+    }
+    .addBox{
+        border-width: 5px;
+        border:0.5px solid rgba(0, 0, 0, 0.15);
+    }
+    .addBoxStudents{
+        width:457px;
+        height:140px;
+    }
+    .addBoxFiles{
+        width:454px;
+        height:90px;
+    }
+    .submitBtn{
+        width:208px;
+        height:48px;
+        background-color: rgba(255, 195, 15, 0.8);
+        border-width: 0px;
+        border-radius: 18px;
+        font-size: 18px;
+        margin-left: 127px;
+        margin-top:20px;
+    }
+    #changeInteraction{
+        width:162px;
+        height:21px;
+        border-radius: 3px;
+        border-width:0px;
+    }
 }
-.addBox{
-    border-width: 5px;
-    border:0.5px solid rgba(0, 0, 0, 0.15);
+/*Mid Yet to be done */
+@media only screen and (min-width:620px) and (max-width:1280px){
+    .mainSection{
+        width: 100%;
+        display:flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        font-size: 14px;
+        /* padding-left: 34px; */
+        line-height: 20px;
+        margin-left: 20%;
+    }
+    #addNewClassForm{
+        display:flex;
+        flex-direction: column;
+        flex-wrap: wrap;   
+    }
+    #addNewClassForm > section >label{
+        display:flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width:382px;
+        height:32px;
+    }
+    .basicInput{
+        margin:auto 0;
+        height:18px;
+        width:185px;
+
+    }
+    .addBox{
+        border-width: 5px;
+        border:0.5px solid rgba(0, 0, 0, 0.15);
+    }
+    .addBoxStudents{
+        width:457px;
+        height:140px;
+    }
+    .addBoxFiles{
+        width:454px;
+        height:90px;
+    }
+    .submitBtn{
+        width:208px;
+        height:48px;
+        background-color: rgba(255, 195, 15, 0.8);
+        border-width: 0px;
+        border-radius: 18px;
+        font-size: 18px;
+        margin-left: 127px;
+        margin-top:20px;
+    }
+    #changeInteraction{
+        width:162px;
+        height:21px;
+        border-radius: 3px;
+        border-width:0px;
+    }
 }
-.addBoxStudents{
-    width:457px;
-    height:140px;
-}
-.addBoxFiles{
-    width:454px;
-    height:90px;
-}
-.submitBtn{
-    width:208px;
-    height:48px;
-    background-color: rgba(255, 195, 15, 0.8);
-    border-width: 0px;
-    border-radius: 18px;
-    font-size: 18px;
-    margin-left: 127px;
-    margin-top:20px;
-}
-#changeInteraction{
-    width:162px;
-    height:21px;
-    border-radius: 3px;
-    border-width:0px;
+/*Mobile*/
+@media only screen and (max-width:620px){
+    .mainSection{
+        display:flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        font-size: 14px;
+        /* padding-left: 34px; */
+        line-height: 20px;
+    }
+    #addNewClassForm{
+        display:flex;
+        flex-direction: column;
+        flex-wrap: wrap; 
+        
+    }
+    #addNewClassForm > section >label{
+        display:flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width:300px;
+        height:32px;
+    }
+    .basicInput{
+        margin:auto 0;
+        height:18px;
+        width:185px;
+
+    }
+    .addBox{
+        border-width: 5px;
+        border:0.5px solid rgba(0, 0, 0, 0.15);
+    }
+    .addBoxStudents{
+        width:300px;
+        height:140px;
+    }
+    .addBoxFiles{
+        width:300px;
+        height:90px;
+    }
+    .submitBtn{
+        width:150px;
+        height:48px;
+        background-color: rgba(255, 195, 15, 0.8);
+        border-width: 0px;
+        border-radius: 18px;
+        font-size: 18px;
+        margin-left: 75px;
+        margin-top:20px;
+    }
+    #changeInteraction{
+        width:162px;
+        height:21px;
+        border-radius: 3px;
+        border-width:0px;
+    }
+    .bodyFormRight{
+        margin-top: 20px;
+    }
 }
