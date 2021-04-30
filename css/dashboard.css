@@ -48,6 +48,7 @@ main>div>aside>p{
         .mainArea{
         display: flexbox;
         padding-left:12px;
+        margin: auto;
     }
     .mainArea h1{
         padding-left: 5px;
@@ -305,6 +306,7 @@ main>div>aside>p{
     .mainArea{
         display: flexbox;
         padding-left:12px;
+        margin: auto;
     }
     .mainArea h1{
         padding-left: 5px;
