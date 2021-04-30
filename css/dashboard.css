@@ -216,6 +216,8 @@ main>div>aside>p{
 }
 
 }
+
+
 /* Mid Screen before mobile */
 @media only screen and (min-width:620px) and (max-width:920px){
     .mainArea{
@@ -303,6 +305,30 @@ main>div>aside>p{
 /*Mobile */
 
 @media only screen and (max-width:620px){
+/* 
+    #logo{
+        margin:auto;
+    }
+    .wrapper>input, .wrapper>button, #userData, nav, #breadcrumb{
+        display:none;
+    }
+    header{
+        height:100px;
+    }
+    .Hamburger{
+        display: inline-block;
+        position:relative;
+        top:60px;
+        right:15px
+    }
+
+    .Hamburger>div {
+        width: 35px;
+        height: 5px;
+        background-color: #ffc40d;
+        margin: 6px 0;
+    } */
+
     .mainArea{
         display: flexbox;
         padding-left:12px;
