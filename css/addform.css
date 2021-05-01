@@ -64,7 +64,7 @@
 /*Mid Yet to be done */
 @media only screen and (min-width:620px) and (max-width:1280px){
     .mainSection{
-        width: 100%;
+        width: 80%;
         display:flex;
         flex-direction: column;
         flex-wrap: wrap;
@@ -123,30 +123,32 @@
 /*Mobile*/
 @media only screen and (max-width:620px){
     .mainSection{
+        width: 100%;
         display:flex;
         flex-direction: column;
         flex-wrap: wrap;
         font-size: 14px;
         /* padding-left: 34px; */
         line-height: 20px;
+        margin: 0 auto;
     }
     #addNewClassForm{
+        width: 250px;
         display:flex;
         flex-direction: column;
-        flex-wrap: wrap; 
-        
+        flex-wrap: wrap;  
     }
     #addNewClassForm > section >label{
         display:flex;
         flex-direction: row;
         justify-content: space-between;
-        width:300px;
+        width:250px;
         height:32px;
     }
     .basicInput{
         margin:auto 0;
         height:18px;
-        width:185px;
+        width:100px;
 
     }
     .addBox{
@@ -154,11 +156,11 @@
         border:0.5px solid rgba(0, 0, 0, 0.15);
     }
     .addBoxStudents{
-        width:300px;
+        width:250px;
         height:140px;
     }
     .addBoxFiles{
-        width:300px;
+        width:250px;
         height:90px;
     }
     .submitBtn{
@@ -168,16 +170,19 @@
         border-width: 0px;
         border-radius: 18px;
         font-size: 18px;
-        margin-left: 75px;
+        margin-left: 50px;
         margin-top:20px;
     }
     #changeInteraction{
-        width:162px;
+        width:75px;
         height:21px;
         border-radius: 3px;
         border-width:0px;
     }
     .bodyFormRight{
         margin-top: 20px;
+    }
+    main{
+        width: 250px;
     }
 }
