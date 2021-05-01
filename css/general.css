@@ -24,7 +24,6 @@ a{
 /*Full screen*/
 @media only screen and (min-width:1280px) {
     
-
     header{
         max-width: 100%;
         margin: 0 auto;
@@ -46,7 +45,8 @@ a{
         background-color: hsla(0, 0%, 77%, 0.205);
         display: flex;
         width: 164px;
-        height: 522px;
+        /* height: 522px; */
+        height: 70vh;
         /* height:100%; */
         float:left;
         flex-direction: column;

@@ -119,9 +119,9 @@
     }
 
     #functionality{
-        width:150px;
+        width:300px;
+        float:right;
         text-align: right;
         position: relative;
-        right: -220px;
     }
 }
