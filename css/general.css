@@ -1,9 +1,9 @@
 
-@font-face {
+/* @font-face {
     font-family: Alata;
     src: url(../fonts/Alata-Regular.ttf);
     font-weight: bold;
-}
+} */
 .wrapper{
     margin: 0 auto; /* Added margin for general use */
 }
