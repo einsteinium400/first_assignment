@@ -1,121 +1,417 @@
 /* MAIN OBJECT PAGE */
 
-#classestab{
-    background-color:#FFC40D ;
+@media only screen and (min-width:1280px){
+    #classestab{
+        background-color:#FFC40D ;
+    }
+
+
+    main{
+        width:1050px;
+        height:480px;
+        position: relative;
+        left:70px;
+        top:20px;
+        display:flex;
+        justify-content: space-between;
+    }
+
+    aside{
+        position: relative;
+        font-size: 14px;
+        text-align: center;
+        width: 282px;
+        height: 185px;
+        background-color: rgba(196, 196, 196, 0.27);
+    }
+
+    main>div>aside>p{
+        position:relative;
+        top:6px;
+    }
+
+    #classinfo{
+        width: 282px;
+        height: 185px;
+    }
+
+    #sideboxes{
+        display: flex;
+        flex-wrap: wrap;
+        position: relative;
+        height:450px;
+        width:282px;
+    }
+
+    h2{
+        font-size: 16px;
+    }
+
+    #classroom{
+        position: relative;
+        background-image: url(../images/class.png);
+        width:418px;
+        height:448px;
+    }
+
+    #studentsinfo{
+        width:335px;
+        height:411px;
+        background-color: hsla(0, 0%, 77%, 0.4);
+        text-align: center;
+    }
+
+
+
+
+
+    #studentsinfo>div{
+        display: flex;
+        /* width:170px; */
+        justify-content: space-around;
+        flex-wrap: wrap;
+
+    }
+
+    #studentsinfo>div>section{
+        height:87px;
+        width:70px;
+        background-color:rgb(255, 255, 255, 0.43);
+        /* border-collapse: collapse; */
+
+    }
+
+
+
+    #studentsinfo>div>section>select,#studentsinfo>div>section .studentSelect {
+        background-color:rgb(255, 255, 255, 0.93);
+        width:90px;
+        height:20px;
+        bottom: 0;
+        left: 0;
+        border-radius: 10px;
+        /* margin: 0px auto; */
+        position: relative;
+        /* text-align: center; */
+        font-size: 12px;
+        border-width: 0px;
+        top:-12px;
+        left:-9px;
+    }
+    #studentsinfo>div>section>select,#studentsinfo>div>section .newStudentSelect {
+        background-color:rgb(255, 255, 255, 0.93);
+        width:90px;
+        height:20px;
+        bottom: 0;
+        left: 0;
+        border-radius: 10px;
+        /* margin: 0px auto; */
+        position: relative;
+        /* text-align: center; */
+        font-size: 12px;
+        border-width: 0px;
+        top:70px;
+        left:-9px;
+    }
+    #studentsinfo>div>section>img{
+        width: 100%;
+        height: 100%;
+        position: relative;
+    }
+
+    #addstudent{
+        position:relative;
+        top:25px;
+        float:left;
+        left:20px;
+    }
+    #addstudent>section>section{
+        position:relative;
+        top:100px;
+        float:left;
+        left:20px;
+    }
+
+}
+/*Tablet Version*/
+@media only screen and (min-width:620px) and (max-width:1280px){
+    #classroom{
+        display: none;
+    }
+    
+    #classestab{
+        background-color:#FFC40D ;
+    }
+
+    main{
+        width:80%;
+        height:480px;
+        position: relative;
+        left:10px;
+        top:20px;
+        display:flex;
+        justify-content: space-between;
+    }
+
+    aside{
+        position: relative;
+        font-size: 14px;
+        text-align: center;
+        width: 282px;
+        height: 185px;
+        background-color: rgba(196, 196, 196, 0.27);
+    }
+
+    main>div>aside>p{
+        position:relative;
+        top:6px;
+    }
+
+    #classinfo{
+        width: 282px;
+        height: 185px;
+    }
+
+    #sideboxes{
+        display: flex;
+        flex-wrap: wrap;
+        position: relative;
+        height:450px;
+        width:282px;
+    }
+
+    h2{
+        font-size: 16px;
+    }
+
+    #classroom{
+        position: relative;
+        background-image: url(../images/class.png);
+        width:418px;
+        height:448px;
+    }
+
+    #studentsinfo{
+        width:335px;
+        height:411px;
+        background-color: hsla(0, 0%, 77%, 0.4);
+        text-align: center;
+    }
+
+
+
+
+
+    #studentsinfo>div{
+        display: flex;
+        /* width:170px; */
+        justify-content: space-around;
+        flex-wrap: wrap;
+
+    }
+
+    #studentsinfo>div>section{
+        height:87px;
+        width:70px;
+        background-color:rgb(255, 255, 255, 0.43);
+        /* border-collapse: collapse; */
+
+    }
+
+
+
+    #studentsinfo>div>section>select,#studentsinfo>div>section .studentSelect {
+        background-color:rgb(255, 255, 255, 0.93);
+        width:90px;
+        height:20px;
+        bottom: 0;
+        left: 0;
+        border-radius: 10px;
+        /* margin: 0px auto; */
+        position: relative;
+        /* text-align: center; */
+        font-size: 12px;
+        border-width: 0px;
+        top:-12px;
+        left:-9px;
+    }
+    #studentsinfo>div>section>select,#studentsinfo>div>section .newStudentSelect {
+        background-color:rgb(255, 255, 255, 0.93);
+        width:90px;
+        height:20px;
+        bottom: 0;
+        left: 0;
+        border-radius: 10px;
+        /* margin: 0px auto; */
+        position: relative;
+        /* text-align: center; */
+        font-size: 12px;
+        border-width: 0px;
+        top:70px;
+        left:-9px;
+    }
+    #studentsinfo>div>section>img{
+        width: 100%;
+        height: 100%;
+        position: relative;
+    }
+
+    #addstudent{
+        position:relative;
+        top:25px;
+        float:left;
+        left:20px;
+    }
+    #addstudent>section>section{
+        position:relative;
+        top:100px;
+        float:left;
+        left:20px;
+    }
+
 }
 
-
-main{
-    width:1050px;
-    height:480px;
-    position: relative;
-    left:70px;
-    top:20px;
-    display:flex;
-    justify-content: space-between;
-}
-
-aside{
-    position: relative;
-    font-size: 14px;
-    text-align: center;
-    width: 282px;
-    height: 185px;
-    background-color: rgba(196, 196, 196, 0.27);
-}
-
-main>div>aside>p{
-    position:relative;
-    top:6px;
-}
-
-#classinfo{
-    width: 282px;
-    height: 185px;
-}
-
-#sideboxes{
-    display: flex;
-    flex-wrap: wrap;
-    position: relative;
-    height:450px;
-    width:282px;
-}
+/*Mobile Version*/
+@media only screen and (max-width:620px){
+   h1{
+       width: 300px;
+       text-align: center;
+   }
+    #classroom{
+        display: none;
+    }
+    #classestab{
+        background-color:#FFC40D ;
+    }
 
 
+    main{
+        width:282px;
+        position: relative;
+        display:flex;
+        flex-direction:column;
+        margin: 0 auto;
+    }
 
-h2{
-    font-size: 16px;
-}
+    aside{
+        position: relative;
+        font-size: 14px;
+        text-align: center;
+        width: 282px;
+        height: 185px;
+        background-color: rgba(196, 196, 196, 0.27);
+    }
 
-#classroom{
-    position: relative;
-    background-image: url(../images/class.png);
-    width:418px;
-    height:448px;
-}
+    main>div>aside>p{
+        position:relative;
+        top:6px;
+    }
 
-#studentsinfo{
-    width:335px;
-    height:411px;
-    background-color: hsla(0, 0%, 77%, 0.4);
-    text-align: center;
-}
+    #classinfo{
+        width: 282px;
+        height: 185px;
+        
+    }
 
+    #sideboxes{
+        display: flex;
+        flex-wrap: wrap;
+        position: relative;
+        height:450px;
+        width:282px;
+        margin-bottom: 20px;
+    }
 
+    h2{
+        font-size: 16px;
+    }
 
+    #classroom{
+        position: relative;
+        background-image: url(../images/class.png);
+        width:418px;
+        height:448px;
+    }
 
-
-#studentsinfo>div{
-    display: flex;
-    /* width:170px; */
-    justify-content: space-around;
-    flex-wrap: wrap;
-
-}
-
-#studentsinfo>div>section{
-    height:87px;
-    width:70px;
-    background-color:rgb(255, 255, 255, 0.43);
-    /* border-collapse: collapse; */
-
-}
+    #studentsinfo{
+        width:335px;
+        height:500px;
+        margin-left: -25px;
+        background-color: hsla(0, 0%, 77%, 0.4);
+        text-align: center;
+    }
 
 
 
-#studentsinfo>div>section>select,#studentsinfo>div>section>section {
-    background-color:rgb(255, 255, 255, 0.93);
-    width:90px;
-    height:20px;
-    bottom: 0;
-    left: 0;
-    border-radius: 10px;
-    /* margin: 0px auto; */
-    position: relative;
-    top:80px;
-    left:-9px;
-    border-width: 0px;
-    /* text-align: center; */
-    font-size: 12px;
-}
 
-#hilaisraeli{
-    background-image: url(../images/hilaisraeli.png);
-}
 
-#ilancohen{
-    background-image: url(../images/ilancohen.png);
+    #studentsinfo>div{
+        display: flex;
+        /* width:170px; */
+        justify-content: space-around;
+        flex-wrap: wrap;
 
-}
+    }
 
-#emilycohen{
-    background-image: url(../images/emilycohen.png);
-}
+    #studentsinfo>div>section{
+        height:87px;
+        width:70px;
+        background-color:rgb(255, 255, 255, 0.43);
+        /* border-collapse: collapse; */
 
-#addstudent{
-    position:relative;
-    top:25px;
-    float:left;
-    left:20px;
+    }
+
+
+
+    #studentsinfo>div>section>select,#studentsinfo>div>section .studentSelect {
+        background-color:rgb(255, 255, 255, 0.93);
+        width:90px;
+        height:20px;
+        bottom: 0;
+        left: 0;
+        border-radius: 10px;
+        /* margin: 0px auto; */
+        position: relative;
+        /* text-align: center; */
+        font-size: 12px;
+        border-width: 0px;
+        top:-12px;
+        left:-9px;
+    }
+    #studentsinfo>div>section>select,#studentsinfo>div>section .newStudentSelect {
+        background-color:rgb(255, 255, 255, 0.93);
+        width:90px;
+        height:20px;
+        bottom: 0;
+        left: 0;
+        border-radius: 10px;
+        /* margin: 0px auto; */
+        position: relative;
+        /* text-align: center; */
+        font-size: 12px;
+        border-width: 0px;
+        top:70px;
+        left:-9px;
+    }
+    #studentsinfo>div>section>img{
+        width: 100%;
+        height: 100%;
+        position: relative;
+    }
+
+    #addstudent{
+        position:relative;
+        top:25px;
+        float:left;
+        left:20px;
+        height: 120px;
+        background-color:rgb(255, 255, 255, 0.43);
+    }
+    #addstudent>section>section{
+        position:relative;
+        top:100px;
+        float:left;
+        left:20px;
+    }
+
 }
