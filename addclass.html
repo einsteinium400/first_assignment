@@ -72,10 +72,10 @@
                 <!--Place here the main content of the page-->
                 <form action="classAdded.php" method="GET" autocomplete="on" id="addNewClassForm">
                     <section class="bodyFormLeft">
-                        <label class="boxesLabel">
+                        <label class="normalLabel">
                             Classroom name:<input type="text" name="className" class="basicInput" required>
                         </label>
-                        <label class="boxesLabel">
+                        <label class="normalLabel">
                             Grade:<select name="grade" class="basicInput">
                                 <option value="1">1st</option>
                                 <option value="2">2nd</option>
@@ -84,26 +84,26 @@
                                 <option value="5">5th</option>
                             </select>
                         </label>
-                        <label class="boxesLabel">
+                        <label class="normalLabel">
                             Date:<input type="date" name="date" class="basicInput" required>
                         </label>
-                        <label class="boxesLabel">
+                        <label class="normalLabel">
                             Type:
                             <div>
                                 <input type="radio" name="classType" value="Recursive" checked="checked">Recursive
                                 <input type="radio" name="classType" value="Once">Once
                             </div>
                         </label>
-                        <label class="boxesLabel">
+                        <label class="normalLabel">
                             Start Time:<input type="datetime" name="startTime" class="basicInput"
                                 pattern="^([0-1]?[0-9]|2[0-3]):[0-5][0-9]$" required>
                         </label>
-                        <label class="boxesLabel">
+                        <label class="normalLabel">
                             End Time:<input type="datetime" name="endTime" class="basicInput"
                                 pattern="^([0-1]?[0-9]|2[0-3]):[0-5][0-9]$" required>
                         </label>
                         Enviroment:
-                        <label class="boxesLabel">
+                        <label class="normalLabel">
                             <div>
                                 <input type="radio" name="classEnv" value="Classroom" checked="checked">Classroom
                             </div>
@@ -114,11 +114,11 @@
                                 <input type="radio" name="classEnv" value="Outdoor">Outdoor
                             </div>
                         </label>
-                        <label class="boxesLabel">
+                        <label class="normalLabel">
                             Interaction allowed:
                             <button id="changeInteraction">Show</button>
                         </label>
-                        <label class="boxesLabel">
+                        <label class="normalLabel">
                             Avatar change mode:<select name="avatarChange" class="basicInput">
                                 <option value="0">Disable</option>
                                 <option value="1">Enable</option>
