@@ -31,24 +31,6 @@
             <div></div>            
         </a>
 
-        <!-- <div id="openhamburger">
-            <a href="index.html" class="current">
-                <p>Dashboard</p>
-            </a>
-            <a href="classeslist.html">
-                <p>Classes</p>
-            </a>
-            <a href="#">
-                <p>Pupils</p>
-            </a>
-            <a href="#">
-                <p>Reports</p>
-            </a>
-            <a href="#">
-                <p>Settings</p>
-            </a>
-        </div> -->
-
     </header>
 
     <div id="hamburgersearch">
@@ -56,7 +38,7 @@
         <button type="submit" value="Search" class="search-btn">Search</button>
     </div>
 
-    
+
     <nav>
         <a href="index.html" class="current">
             <p>Dashboard</p>
@@ -91,10 +73,10 @@
                 <form action="" method="GET" autocomplete="on" id="addNewClassForm">
                     <section class="bodyFormLeft">
                         <label>
-                            <p>Classroom name:</p><input type="text" name="className" class="basicInput" required>
+                            Classroom name:<input type="text" name="className" class="basicInput" required>
                         </label>
                         <label>
-                            <p>Grade:</p><select name="grade" class="basicInput">
+                            Grade:<select name="grade" class="basicInput">
                                 <option value="1">1st</option>
                                 <option value="2">2nd</option>
                                 <option value="3">3rd</option>
@@ -103,32 +85,32 @@
                             </select>
                         </label>
                         <label>
-                            <p>Date:</p><input type="date" name="date" class="basicInput" required>
+                            Date:<input type="date" name="date" class="basicInput" required>
                         </label>
                         <label>
-                            <p>Type:</p>
-                            <p><input type="radio" name="classType" checked="checked">Recursive
+                            Type:
+                            <input type="radio" name="classType" checked="checked">Recursive
                                 <input type="radio" name="classType">Once
-                            </p>
+                            
                         </label>
                         <label>
-                            <p>Start Time:</p><input type="datetime" name="startTime" class="basicInput" pattern="^([0-1]?[0-9]|2[0-3]):[0-5][0-9]$" required>
+                            Start Time:<input type="datetime" name="startTime" class="basicInput" pattern="^([0-1]?[0-9]|2[0-3]):[0-5][0-9]$" required>
                         </label>
                         <label>
-                            <p>End Time:</p><input type="datetime" name="endTime" class="basicInput" pattern="^([0-1]?[0-9]|2[0-3]):[0-5][0-9]$" required>
+                            End Time:<input type="datetime" name="endTime" class="basicInput" pattern="^([0-1]?[0-9]|2[0-3]):[0-5][0-9]$" required>
                         </label>
-                        <p>Enviroment:</p>
+                        Enviroment:
                         <label>
-                            <p><input type="radio" name="classEnv" checked="checked">Classroom</p>
-                            <p><input type="radio" name="classEnv">Labratory</p>
-                            <p><input type="radio" name="classEnv">Outdoor</p>
+                            <input type="radio" name="classEnv" checked="checked">Classroom
+                            <input type="radio" name="classEnv">Labratory
+                            <input type="radio" name="classEnv">Outdoor
                         </label>
                         <label>
-                            <p>Interaction allowed:</p>
+                            Interaction allowed:
                             <button id="changeInteraction">Show</button>
                         </label>
                         <label>
-                            <p>Avatar change mode:</p><select name="avatarChange" class="basicInput">
+                            Avatar change mode:<select name="avatarChange" class="basicInput">
                                 <option value="0">Disable</option>
                                 <option value="1">Enable</option>
                             </select>
@@ -136,11 +118,11 @@
                     </section>
                     <section class="bodyFormRight">
                         <label>
-                            <p>Add Students</p><i class="fas fa-user-plus icon24"></i>
+                            Add Students<i class="fas fa-user-plus icon24"></i>
                         </label>
                         <div class="addBox addBoxStudents"></div>
                         <label>
-                            <p>Upload files</p><i class="fas fa-folder-plus icon34"></i>
+                            Upload files<i class="fas fa-folder-plus icon34"></i>
                         </label>
                         <div class="addBox addBoxFiles"></div>
                         <input type="submit" name="submit" class="submitBtn" value="Submit">

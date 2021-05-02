@@ -276,7 +276,6 @@
 @media only screen and (max-width:620px){
    h1{
        width: 300px;
-       /* text-align: center; */
    }
     #classroom{
         display: none;
@@ -358,7 +357,6 @@
         height:87px;
         width:70px;
         background-color:rgb(255, 255, 255, 0.43);
-        /* border-collapse: collapse; */
 
     }
 
@@ -371,9 +369,7 @@
         bottom: 0;
         left: 0;
         border-radius: 10px;
-        /* margin: 0px auto; */
         position: relative;
-        /* text-align: center; */
         font-size: 12px;
         border-width: 0px;
         top:-12px;
@@ -386,9 +382,7 @@
         bottom: 0;
         left: 0;
         border-radius: 10px;
-        /* margin: 0px auto; */
         position: relative;
-        /* text-align: center; */
         font-size: 12px;
         border-width: 0px;
         top:70px;
