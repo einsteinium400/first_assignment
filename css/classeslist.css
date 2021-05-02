@@ -1,53 +1,119 @@
-main{
-    display: flex;
-    justify-content:space-between;
-    flex-wrap: wrap;
-    left:20px;
-    float:left;
+/*Full screen + Tablet */
+@media only screen and (min-width:620px){
+    main{
+        display: flex;
+        justify-content:space-between;
+        flex-wrap: wrap;
+        left:20px;
+        float:left;
+        width: 80%;
+    }
+
+    main>div{
+        width:400px;
+        height:195px;   
+    }
+
+    main>div>h2{
+        margin: 0px auto;
+        width:110px
+    }
+
+    main>div>div{
+        display:flex;
+        justify-content: space-between;
+    }
+
+    main>div>div>section{
+        background-color: hsla(0, 0%, 77%, 0.1);
+        width:112px;
+        height:170px;
+    }
+
+    main>div>div>section>div>h3{
+    font-size: 14px;
+    }
+
+    main>div>div>section>div>p{
+        font-size: 12px;
+        margin: auto;
+    }
+
+
+    .lessonimage{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #functionality{
+        width:300px;
+        float:right;
+        position: relative;
+        right: -180px;
+    }
 }
 
-main>div{
-     width:400px;
-    height:195px;   
-}
+/*Mobie */
+@media only screen and (max-width:620px){
+    h1{
+        width: 360px;
+        /* text-align: center; */
+        margin: 0 auto;
+    }
+    main{
+        width: 80%;
+    }
+    main{
+        display: flex;
+        justify-content:space-between;
+        flex-wrap: wrap;
+        left:20px;
+        float:left;
+        width: 80%;
+    }
 
-main>div>h2{
-    margin: 0px auto;
-    width:110px
-}
+    main>div{
+        width:400px;
+        height:195px;   
+    }
 
-main>div>div{
-    display:flex;
-    justify-content: space-between;
-}
+    main>div>h2{
+        margin: 0px auto;
+        width:110px
+    }
 
-main>div>div>section{
-    background-color: hsla(0, 0%, 77%, 0.1);
-    width:112px;
-    height:170px;
-}
+    main>div>div{
+        display:flex;
+        justify-content: space-between;
+    }
 
-main>div>div>section>div>h3{
-font-size: 14px;
-}
+    main>div>div>section{
+        background-color: hsla(0, 0%, 77%, 0.1);
+        width:112px;
+        height:170px;
+    }
 
-main>div>div>section>div>p{
-    font-size: 12px;
-    margin: auto;
-}
+    main>div>div>section>div>h3{
+    font-size: 14px;
+    }
 
-/* main>div>div>section>div{
-    overflow:inherit;
-    height: 100%;
-} */
+    main>div>div>section>div>p{
+        font-size: 12px;
+        margin: auto;
+    }
 
-.lessonimage{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
 
-#functionality{
-    width:300px;
-    float:left;
+    .lessonimage{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #functionality{
+        width:300px;
+        float:right;
+        text-align: right;
+        position: relative;
+    }
 }

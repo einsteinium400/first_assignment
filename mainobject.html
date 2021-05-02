@@ -2,11 +2,15 @@
 <html>
 
 <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ClassMates</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/general.css">
     <link rel="stylesheet" href="css/mainobject.css">
-
-    <!-- <link href="/favicon.ico" type="image/x-icon" rel="icon" /> -->
+    <script src="js/general.js"></script>
 
 </head>
 
@@ -14,18 +18,32 @@
     <header class="wrapper">
         <a href="#" id="logo"></a>
         <input type="text" name="searchItems" id="searchBar" placeholder="Search students, classes, reports...">
-        <button tpye="submit" value="Search" class="search-btn">Search</button>
+        <button type="submit" value="Search" class="search-btn">Search</button>
         <div id="userData">
             <p id="nameGreeting">Hello, Ron Azulai</p>
             <p id="time">07:52</p>
         </div>
+
+        <a href="#" class="Hamburger">
+            <div></div>
+            <div></div>
+            <div></div>
+        </a>
+
     </header>
 
+    <div id="hamburgersearch">
+        <input type="text" name="searchItems" placeholder="Search students, classes, reports...">
+        <button type="submit" value="Search" class="search-btn">Search</button>
+    </div>
+
+
+
     <nav>
-        <a href="#">
+        <a href="index.html">
             <p>Dashboard</p>
         </a>
-        <a href="#" class="current">
+        <a href="classeslist.html" class="current">
             <p>Classes</p>
         </a>
         <a href="#">
@@ -39,13 +57,15 @@
         </a>
     </nav>
 
+
+
     <ul id="breadcrumb">
-        <li><a href="#">Dashboard</a></li>
-        <li><a href="#">Classes</a></li>
+        <li><a href="index.html">Dashboard</a></li>
+        <li><a href="classeslist.html">Classes</a></li>
         <li>Class info</li>
     </ul>
 
-    <h1>Classes info</h1>
+    <h1>Class info</h1>
     <main>
         <div id="sideboxes">
             <aside>
@@ -69,7 +89,6 @@
             </aside>
             <aside>
                 <h2>Student Alerts</h2>
-                <!--PHP Alerts-->
                 <p>Hila from 3rd grade missed 3 lessons</p>
             </aside>
         </div>
@@ -77,13 +96,13 @@
         <section id="classroom"></section>
 
         <section id="studentsinfo">
-            <!-- <?php foreach($_GET["students"] as student)
-                    echo (Add Student) php?> -->
+
             <h2>Math 1st Grade Students</h2>
 
             <div>
                 <section id="hilaisraeli">
-                    <select>
+                    <img src="/images/hilaisraeli.png" alt="Hila Israeli" title="Hila Israeli">
+                    <select class="studentSelect">
                         <option selected>Hila Israeli</option>
                         <option value="1">One</option>
                         <option value="2">Two</option>
@@ -92,7 +111,8 @@
                 </section>
 
                 <section id="ilancohen">
-                    <select>
+                    <img src="/images/ilancohen.png" alt="Ilan Cohen" title="Ilan Cohen">
+                    <select class="studentSelect">
                         <option selected>Ilan cohen</option>
                         <option value="1">One</option>
                         <option value="2">Two</option>
@@ -101,7 +121,8 @@
                 </section>
 
                 <section id="emilycohen">
-                    <select>
+                    <img src="/images/emilycohen.png" alt="Emily Cohen" title="Emily Cohen">
+                    <select class="studentSelect">
                         <option selected>Emily Cohen</option>
                         <option value="1">One</option>
                         <option value="2">Two</option>
@@ -111,9 +132,10 @@
             </div>
 
             <div id="addstudent">
-                <section> 
-                    <section>
-                    <p>Add student</p></section>
+                <section >
+                    <section class="newStudentSelect">
+                        <p>Add student</p>
+                    </section>
                 </section>
             </div>
         </section>
