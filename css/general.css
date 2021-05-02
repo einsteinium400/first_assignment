@@ -23,7 +23,10 @@ a{
 }
 /*Full screen*/
 @media only screen and (min-width:1280px) {
-    
+    #hamburgersearch{
+        display:none;
+    }
+
     header{
         max-width: 100%;
         margin: 0 auto;
@@ -159,7 +162,10 @@ a{
 /*Mid screen screen tablet*/
 @media only screen and (min-width:620px) and (max-width:1280px) {
     
-
+    #hamburgersearch{
+        display:none;
+    }
+    
     header{
         max-width: 100%;
         margin: 0 auto;
@@ -431,10 +437,13 @@ a{
         margin:auto;
     }
 
+    h1{
+        text-align: center;
+    }
+
     nav{
         display:flex;
         flex-direction:column;
-        /* width:100%; */
     }
 
     nav>a{
@@ -447,25 +456,31 @@ a{
         display:block;
         position:relative;
     }
-/* 
+
     #hamburgersearch{
+        width:100%;
+        display:flex;
+        align-items: center;
+        justify-content: space-evenly;
         height:50px;
         display:flex;
         background-color: hsla(0, 0%, 77%, 0.205);
     }
 
     #hamburgersearch>input{
-        position:relative;
-        width:85%;
-        left:10px;
+        width:70%;
         height:30px;
         border-radius: 32px;
+        border:0px;
     }
+
     #hamburgersearch>button{
-        position:relative;
-        
-    } */
-    .wrapper>input, nav, .wrapper>button, #userData, #breadcrumb, #searchBar{
+        position:unset;
+        width:20%;
+        opacity: 100;
+    }  
+
+    .wrapper>input, nav, .wrapper>button, #userData, #breadcrumb, #searchBar, #hamburgersearch{
         display:none;
     }
 
