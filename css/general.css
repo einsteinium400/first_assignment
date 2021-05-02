@@ -500,4 +500,17 @@ a{
         background-color: #ffc40d;
         margin: 6px 0;
     }
+
+    /* Icons from font aweasone cdn size change*/
+    .icon34{
+        font-size:24px;
+        line-height: 40px;
+    }
+    .icon24{
+        font-size:18px;
+        margin-left: 7px;
+    }
+    i:hover{
+        cursor: pointer;
+    }
 }

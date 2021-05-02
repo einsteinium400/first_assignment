@@ -28,7 +28,7 @@
         <a href="#" class="Hamburger">
             <div></div>
             <div></div>
-            <div></div>            
+            <div></div>
         </a>
 
     </header>
@@ -70,7 +70,7 @@
             <h1>Add Class</h1>
             <section class="mainSection">
                 <!--Place here the main content of the page-->
-                <form action="" method="GET" autocomplete="on" id="addNewClassForm">
+                <form action="classAdded.php" method="GET" autocomplete="on" id="addNewClassForm">
                     <section class="bodyFormLeft">
                         <label>
                             Classroom name:<input type="text" name="className" class="basicInput" required>
@@ -89,21 +89,30 @@
                         </label>
                         <label>
                             Type:
-                            <input type="radio" name="classType" checked="checked">Recursive
-                                <input type="radio" name="classType">Once
-                            
+                            <div>
+                                <input type="radio" name="classType" value="Recursive" checked="checked">Recursive
+                                <input type="radio" name="classType" value="Once">Once
+                            </div>
                         </label>
                         <label>
-                            Start Time:<input type="datetime" name="startTime" class="basicInput" pattern="^([0-1]?[0-9]|2[0-3]):[0-5][0-9]$" required>
+                            Start Time:<input type="datetime" name="startTime" class="basicInput"
+                                pattern="^([0-1]?[0-9]|2[0-3]):[0-5][0-9]$" required>
                         </label>
                         <label>
-                            End Time:<input type="datetime" name="endTime" class="basicInput" pattern="^([0-1]?[0-9]|2[0-3]):[0-5][0-9]$" required>
+                            End Time:<input type="datetime" name="endTime" class="basicInput"
+                                pattern="^([0-1]?[0-9]|2[0-3]):[0-5][0-9]$" required>
                         </label>
                         Enviroment:
                         <label>
-                            <input type="radio" name="classEnv" checked="checked">Classroom
-                            <input type="radio" name="classEnv">Labratory
-                            <input type="radio" name="classEnv">Outdoor
+                            <div>
+                                <input type="radio" name="classEnv" value="Classroom" checked="checked">Classroom
+                            </div>
+                            <div>
+                                <input type="radio" name="classEnv" value="Labratory">Labratory
+                            </div>
+                            <div>
+                                <input type="radio" name="classEnv" value="Outdoor">Outdoor
+                            </div>
                         </label>
                         <label>
                             Interaction allowed:
