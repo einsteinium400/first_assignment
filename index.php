@@ -1,81 +1,71 @@
+
+
+<?php
+    include 'db.php';
+    // include 'config.php';
+    define("URL", "http://localhost/tirgul13/");
+
+    if(isset($_POST["id"])) { // true if form was submitted
+        $query  = "SELECT * FROM tbl_users_223 WHERE id='" 
+                . $_POST["id"] 
+                . "' and password= '"
+                . $_POST["password"]
+                ."'";
+
+        $result = mysqli_query($connection , $query);
+        $row    = mysqli_fetch_array($result);
+     //   echo ($row);
+        if(is_array($row)) {
+            echo 'Authentication success !';
+        } else {
+            // echo 'Authentication failed !';
+            $message = "Invalid username or password !";
+        }
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link rel="stylesheet" href="css/general.css">
-    <link rel="stylesheet" href="css/dashboard.css">
-    <script src="js/dashboardscript.js"></script>
-    <script src="js/general.js"></script>
+    <link rel="stylesheet" href="css/login.css">
 
-    <title>Dashboard</title>
+    <title>Login</title>
 </head>
-
 <body>
-    <header class="wrapper">
+
+  <main>
         <a href="#" id="logo"></a>
-        <input type="text" name="searchItems" id="searchBar" placeholder="Search students, classes, reports...">
-        <button type="submit" value="Search" class="search-btn">Search</button>
-        <div id="userData">
-            <p id="nameGreeting">Hello, Ron Azulai</p>
-            <p id="time">07:52</p>
+        <form action="#" method="post" class="form-signin">
+
+        <div class="form-group">
+          <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
         </div>
 
-        <a href="#" class="Hamburger">
-            <div></div>
-            <div></div>
-            <div></div>
-        </a>
+        <div class="form-group">
+          <input name="id" class="form-control" placeholder="Enter ID">
+          <input name="password" type="password" placeholder="Enter Password" class="form-control">
+        </div>
 
+        <div class="form-group">
+          <button type="submit" class="btn">Log Me In</button>
+        </div>
 
-    </header>
+        <div class="error-message"><?php if(isset($message)) { echo $message; } ?></div>
+        </div>
+      </form>
 
-    <div id="hamburgersearch">
-        <input type="text" name="searchItems" placeholder="Search students, classes, reports...">
-        <button type="submit" value="Search" class="search-btn">Search</button>
-    </div>
-
-
-    <nav>
-        <a href="#" class="current">
-            <p>Dashboard</p>
-        </a>
-        <a href="classeslist.html">
-            <p>Classes</p>
-        </a>
-        <a href="#">
-            <p>Pupils</p>
-        </a>
-        <a href="#">
-            <p>Reports</p>
-        </a>
-        <a href="#">
-            <p>Settings</p>
-        </a>
-    </nav>
-
-    <ul id="breadcrumb">
-        <li><a href="#">Dashboard</a></li>
-    </ul>
-
-    <h1>Dashboard</h1>
-
-    <main class="wrapper">
-        <section class="mainArea">
-            <section class="mainSection">
-                <!--Place here the main content of the page-->
-                
-                
-
-            </section>
-        </section>
-    </main>
+  </main>
+ 
 </body>
-
 </html>
