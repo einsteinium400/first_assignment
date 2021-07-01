@@ -1,3 +1,39 @@
+<?php
+
+    include 'db.php';
+
+    include "config.php";
+
+    session_start();//on logout session_destroy();
+
+    if(isset($_GET["classID"])) { //true if form was submitted
+        $query  = "SELECT * FROM tbl_classes_223 WHERE ClassID='" 
+
+        . $_GET["classID"] . "'" ;
+
+        // echo $query;//can't start echo if header comes after it
+
+   
+
+        $result = mysqli_query($connection , $query);
+
+        $row    = mysqli_fetch_array($result);
+        
+        if(!is_array($row)) {
+
+            header('Location: ' . URL . 'classeslist.php');
+        }
+
+    }
+    else
+    {
+        //Throw back to classes on attempt to enter the page without querry string 
+        header('Location: ' . URL . 'classeslist.php');
+    }
+
+?>
+
+
 <!DOCTYPE html>
 <html>
 
@@ -20,7 +56,7 @@
         <input type="text" name="searchItems" id="searchBar" placeholder="Search students, classes, reports...">
         <button type="submit" value="Search" class="search-btn">Search</button>
         <div id="userData">
-            <p id="nameGreeting">Hello, Ron Azulai</p>
+            <p id="nameGreeting">Hello, <?php echo $_SESSION["usr"]?></p>
             <p id="time">07:52</p>
         </div>
 
@@ -71,20 +107,24 @@
             <aside>
                 <p id="classinfo">
 
-                    math class
-                    <!-- <?php echo $_get["className"] php?> --><br>
-                    1st grade
-                    <!-- <?php echo $_get["grade"] php?> --><br>
-                    every tuesday
-                    <!-- <?php echo $_get["day"] php?> --><br>
-                    10-11am
-                    <!-- <?php echo $_get["startTime"] . "-" .$_get["endTime"]  php?> --><br>
-                    classrom enviornment
-                    <!-- <?php echo $_get["enviorment"] php?> --><br>
-                    interaction: allowed
-                    <!-- <?php echo $_get["interaction"] php?> --><br>
-                    avatar change: allowed
-                    <!-- <?php echo $_get["avatarChage"] php?> --><br>
+                    <?php echo $row["Name"]; ?> <br>
+                    <?php echo $row["Grade"]; ?> Grade <br>
+                    Every <?php echo $row["Day"]; ?><br>
+                    <?php 
+                        $starttime = date("H:i",strtotime($row["StartDate"]));
+                        $endtime = date("H:i",strtotime($row["EndDate"]));
+                        echo $starttime. " - " . $endtime ;
+                    ?>
+                    <br>
+                    <?php 
+                        $startDate = date("d-m-Y",strtotime($row["StartDate"]));
+                        $endDate = date("d-m-Y",strtotime($row["EndDate"]));
+                        echo $startDate. " - " . $endDate ;
+                    ?>
+                    <br>
+                    classrom enviornment: <?php echo enviormentTypeArray[$row["EnviormentType"]]; ?><br>
+                    interaction: <?php echo allowedArray[$row["InteractionAllowed"]]; ?><br>
+                    avatar change: <?php echo allowedArray[$row["AvatarChangeMode"]]; ?><br>
                 </p>
             </aside>
             <aside>
@@ -144,5 +184,11 @@
 
 
 </body>
+<?php
 
+//close DB connection
+
+mysqli_close($connection);
+
+?>
 </html>
