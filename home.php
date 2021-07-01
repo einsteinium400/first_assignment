@@ -46,7 +46,7 @@
         <a href="#" class="current">
             <p>Dashboard</p>
         </a>
-        <a href="classeslist.html">
+        <a href="classeslist.php">
             <p>Classes</p>
         </a>
         <a href="#">

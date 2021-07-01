@@ -1,3 +1,17 @@
+<?php
+
+
+    include "config.php";
+
+    session_start();//on logout session_destroy();
+    // Checking if a user logged and a teacher
+    // if(!isset($_SESSION["usr"])) {
+    //     //Throw back to login page
+    //     header('Location: ' . URL . 'index.php');
+    // }
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -21,7 +35,7 @@
         <input type="text" name="searchItems" id="searchBar" placeholder="Search students, classes, reports...">
         <button type="submit" value="Search" class="search-btn">Search</button>
         <div id="userData">
-            <p id="nameGreeting">Hello, Ron Azulai</p>
+            <p id="nameGreeting">Hello, <?php echo $_SESSION["usr"]?></p>
             <p id="time">07:52</p>
         </div>
 
@@ -40,7 +54,7 @@
 
 
     <nav>
-        <a href="index.html" class="current">
+        <a href="home.html" class="current">
             <p>Dashboard</p>
         </a>
         <a href="classeslist.html">
@@ -58,8 +72,8 @@
     </nav>
 
     <ul id="breadcrumb">
-        <li><a href="index.html">Dashboard</a></li>
-        <li><a href="classeslist.html">Classes</a></li>
+        <li><a href="home.php">Dashboard</a></li>
+        <li><a href="classeslist.php">Classes</a></li>
         <li>Add class</li>
     </ul>
 
@@ -105,13 +119,13 @@
                         Enviroment:
                         <label class="normalLabel">
                             <div>
-                                <input type="radio" name="classEnv" value="Classroom" checked="checked">Classroom
+                                <input type="radio" name="classEnv" value="0" checked="checked">Classroom
                             </div>
                             <div>
-                                <input type="radio" name="classEnv" value="Labratory">Labratory
+                                <input type="radio" name="classEnv" value="1">Labratory
                             </div>
                             <div>
-                                <input type="radio" name="classEnv" value="Outdoor">Outdoor
+                                <input type="radio" name="classEnv" value="2">Outdoor
                             </div>
                         </label>
                         <label class="normalLabel">
@@ -142,5 +156,4 @@
         </section>
     </main>
 </body>
-
 </html>

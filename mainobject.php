@@ -76,10 +76,10 @@
 
 
     <nav>
-        <a href="index.html">
+        <a href="home.php">
             <p>Dashboard</p>
         </a>
-        <a href="classeslist.html" class="current">
+        <a href="classeslist.php" class="current">
             <p>Classes</p>
         </a>
         <a href="#">
@@ -96,7 +96,7 @@
 
 
     <ul id="breadcrumb">
-        <li><a href="index.html">Dashboard</a></li>
+        <li><a href="home.html">Dashboard</a></li>
         <li><a href="classeslist.html">Classes</a></li>
         <li>Class info</li>
     </ul>
@@ -111,15 +111,9 @@
                     <?php echo $row["Grade"]; ?> Grade <br>
                     Every <?php echo $row["Day"]; ?><br>
                     <?php 
-                        $starttime = date("H:i",strtotime($row["StartDate"]));
-                        $endtime = date("H:i",strtotime($row["EndDate"]));
+                        $starttime = date("H:i",strtotime($row["StartTime"]));
+                        $endtime = date("H:i",strtotime($row["EndTime"]));
                         echo $starttime. " - " . $endtime ;
-                    ?>
-                    <br>
-                    <?php 
-                        $startDate = date("d-m-Y",strtotime($row["StartDate"]));
-                        $endDate = date("d-m-Y",strtotime($row["EndDate"]));
-                        echo $startDate. " - " . $endDate ;
                     ?>
                     <br>
                     classrom enviornment: <?php echo enviormentTypeArray[$row["EnviormentType"]]; ?><br>
@@ -137,8 +131,8 @@
 
         <section id="studentsinfo">
 
-            <h2>Math 1st Grade Students</h2>
-
+            <h2><?php echo $row["Name"] . " " . $row["Grade"] . " Grade Students"; ?></h2>
+            
             <div>
                 <section id="hilaisraeli">
                     <img src="images/hilaisraeli.png" alt="Hila Israeli" title="Hila Israeli">

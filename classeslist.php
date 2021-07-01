@@ -38,7 +38,7 @@
 
 
     <nav>
-        <a href="index.html">
+        <a href="home.php">
             <p>Dashboard</p>
         </a>
         <a href="#" class="current">
@@ -56,7 +56,7 @@
     </nav>
 
     <ul id="breadcrumb">
-        <li><a href="index.html">Dashboard</a></li>
+        <li><a href="home.php">Dashboard</a></li>
         <li><a href="#">Classes</a></li>
     </ul>
 

@@ -1,3 +1,67 @@
+<?php
+
+include 'db.php';
+
+include "config.php";
+
+session_start();//on logout session_destroy();
+
+$name = $_GET["className"];
+$grade = $_GET["grade"];
+$date = $_GET["date"];
+$classType = $_GET["classType"];
+$startTime = $_GET["startTime"];
+$endTime = $_GET["endTime"];
+$classEnv = $_GET["classEnv"];
+$avatarChange = $_GET["avatarChange"];
+
+$nameForSql = mysqli_real_escape_string($connection, $name);
+$gradeForSql = mysqli_real_escape_string($connection, $grade);
+$startTimeForSql = mysqli_real_escape_string($connection, $startTime);
+$endTimeForSql = mysqli_real_escape_string($connection, $endTime);
+
+$timestamp = strtotime($date);
+$dayForSql = mysqli_real_escape_string($connection, date('l', $timestamp));
+
+
+
+
+//no session basic id for teacher
+$query = "insert into tbl_classes_223(
+    `ClassID` ,
+    `TeacherID` ,
+    `Name` ,
+    `Day` ,
+    `StartTime` ,
+    `EndTime` ,
+    `EnviormentType` ,
+    `Grade` ,
+    `AvatarChangeMode` ,
+    `InteractionAllowed`
+    )
+    values (NULL, '123','$nameForSql','$dayForSql','$startTimeForSql','$endTimeForSql','$classEnv','$gradeForSql','$avatarChange','1')";
+
+// $query = "INSERT INTO tbl_classes_223 (
+//     'TeacherID' ,
+//     'Name' ,
+//     'Day' ,
+//     'StartTime' ,
+//     'EndTime' ,
+//     'EnviormentType' ,
+//     'Grade' ,
+//     'AvatarChangeMode' ,
+//     'InteractionAllowed'
+//     )
+//     VALUES (
+//     '" . $_SESSION["usrID"] ."', '". $name ."', '". date('l', $timestamp) ."', '". $startTime ."', '". $endTime ."', '". $classEnv ."', '". $grade ."', '". $avatarChange."', '1'
+//     );";
+
+$result = mysqli_query($connection , $query);
+
+
+
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -21,7 +85,7 @@
         <input type="text" name="searchItems" id="searchBar" placeholder="Search students, classes, reports...">
         <button type="submit" value="Search" class="search-btn">Search</button>
         <div id="userData">
-            <p id="nameGreeting">Hello, Ron Azulai</p>
+            <p id="nameGreeting">Hello, <?php echo $_SESSION["usr"]?></p>
             <p id="time">07:52</p>
         </div>
 
@@ -44,7 +108,7 @@
         <a href="#" class="current">
             <p>Dashboard</p>
         </a>
-        <a href="classeslist.html">
+        <a href="classeslist.php">
             <p>Classes</p>
         </a>
         <a href="#">
@@ -64,14 +128,7 @@
                 <!--Place here the main content of the page-->
                 <h2> You have succesfully added a class room:</h2>
                     <?php 
-                        $name = $_GET["className"];
-                        $grade = $_GET["grade"];
-                        $date = $_GET["date"];
-                        $classType = $_GET["classType"];
-                        $startTime = $_GET["startTime"];
-                        $endTime = $_GET["endTime"];
-                        $classEnv = $_GET["classEnv"];
-                        $avatarChange = $_GET["avatarChange"];
+                        
 
                         echo '<p id="classroomInfo">Class name:' . $name . "<br>";
                         echo 'Number of grade:' . $grade . "<br>";
@@ -89,7 +146,7 @@
                         echo '</p>';
                     ?>
 
-                        <a id="backToClassesBtn" href="classeslist.html">Back to classes</a>
+                        <a id="backToClassesBtn" href="classeslist.php">Back to classes</a>
                 
             </section>
         </section>
