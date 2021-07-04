@@ -1,3 +1,13 @@
+<?php
+    include "db.php";
+    include "config.php";
+    session_start();
+    $teacherIDForSql = mysqli_real_escape_string($connection,$_SESSION["usrID"]);
+?>
+
+
+
+
 <!DOCTYPE html>
 <html>
 
@@ -20,7 +30,7 @@
         <input type="text" name="searchItems" id="searchBar" placeholder="Search students, classes, reports...">
         <button type="submit" value="Search" class="search-btn">Search</button>
         <div id="userData">
-            <p id="nameGreeting">Hello, Ron Azulai</p>
+        <p id="nameGreeting">Hello, <?php  echo $_SESSION["usrName"]?></p>
             <p id="time">07:52</p>
         </div>
 
@@ -64,7 +74,7 @@
 
     <div id="functionality">
         <p>
-            <a href="addclass.html"> <img src="images/add.png" alt="">
+            <a href="addclass.php"> <img src="images/add.png" alt="">
             </a>
             Add
             <a href="#"> <img src="images/listview.png" alt="">
@@ -77,117 +87,75 @@
         <div>
             <h2>1st class</h2>
             <div>
-                <section>
+                <?php 
+                //get data from DB
+                $query 	= "SELECT * FROM tbl_classes_223 where Grade='1' and teacherID='$teacherIDForSql'";
+                $result = mysqli_query($connection, $query);
+                if(!$result) {
+                    die("DB query failed.");  } 
+                while($row = mysqli_fetch_assoc($result)) {//results are in associative array. keys are cols names
+                echo '<section>
                     <div>
-                        <h3>&nbsp; French class</h3>
-                        <p><img class="lessonimage" src="images/frenchclass.png" alt="">
-                            <!-- <br> -->
-                            Sunday<br>12:30-14:00
-                            <br>
-                            &nbsp; &nbsp; &nbsp; &nbsp;
+                    <h3>&nbsp;'. $row["Name"] .'</h3>
+                    <p><img class="lessonimage" src="'. $row["Image"] .'" alt="">
+                    '. $row["Day"] .'<br>'. $row["StartTime"] .'-'. $row["EndTime"] .'
+                        <br>
+                        &nbsp; &nbsp; &nbsp; &nbsp;
 
-                            <a href="#"> <img src="images/info.png" alt="">
-                            </a>
-                            info
-                            <br>
-                            &nbsp; &nbsp; &nbsp;
+                        <a href="mainobject.php?ClassID='. $row["ClassID"] .'"> <img src="images/info.png" alt="">
+                        </a>
+                        info
+                        <br>
+                        &nbsp; &nbsp; &nbsp;
 
-                            <a href="#"> <img src="images/edit.png" alt="">
-                            </a>
-                            &nbsp; &nbsp; &nbsp;
-                            <a href="#" class="deleteitem"  > <img src="images/delete.png" alt="">
-                            </a>
-
-                            <br>
-                            &nbsp; &nbsp; &nbsp; edit &nbsp; &nbsp; delete
-                        </p>
-                    </div>
-                </section>
-
-
-                <section>
-                    <div>
-                        <h3>&nbsp; English class</h3>
-                        <p><img class="lessonimage" src="images/englishclass.png" alt="">
-                            Monday<br>12:30-14:00
-                            <br>
-                            &nbsp; &nbsp; &nbsp; &nbsp;
-
-                            <a href="#"> <img src="images/info.png" alt="">
-                            </a>
-                            info
-                            <br>
-                            &nbsp; &nbsp; &nbsp;
-
-                            <a href="#"> <img src="images/edit.png" alt="">
-                            </a>
-                            &nbsp; &nbsp; &nbsp;
-                            <a href="#" class="deleteitem" > <img src="images/delete.png" alt="">
-                            </a>
-
-                            <br>
-                            &nbsp; &nbsp; &nbsp; edit &nbsp; &nbsp; delete
-                        </p>
-                    </div>
-                </section>
-
-
-                <section>
-                    <div>
-                        <h3>&nbsp; Math class</h3>
-                        <p><img class="lessonimage" src="images/mathclass.png" alt="">
-                            Tuesday<br>10:00-11:00
-                            <br>
-                            &nbsp; &nbsp; &nbsp; &nbsp;
-
-                            <a href="mainobject.html"> <img src="images/info.png" alt="">
-                            </a>
-                            info
-                            <br>
-                            &nbsp; &nbsp; &nbsp;
-
-                            <a href="#"> <img src="images/edit.png" alt="">
-                            </a>
-                            &nbsp; &nbsp; &nbsp;
-                             <a href="#" class="deleteitem"  ><img src="images/delete.png" alt=""></a>
-                            <br>
-                            &nbsp; &nbsp; &nbsp; edit &nbsp; &nbsp; delete
-                        </p>
-                    </div>
-                </section>
+                        <a href="#"> <img src="images/edit.png" alt="">
+                        </a>
+                        &nbsp; &nbsp; &nbsp;
+                         <a href="#" class="deleteitem"><img src="images/delete.png" alt=""></a>
+                        <br>
+                        &nbsp; &nbsp; &nbsp; edit &nbsp; &nbsp; delete
+                    </p>
+                </div>
+            </section>';} ?> 
             </div>
         </div>
 
         <div>
             <h2>2nd class</h2>
             <div>
-                <section>
+            <?php 
+                //get data from DB
+                $query 	= "SELECT * FROM tbl_classes_223 where Grade='2' and teacherID='$teacherIDForSql'";
+                $result = mysqli_query($connection, $query);
+                if(!$result) {
+                    die("DB query failed.");  } 
+                while($row = mysqli_fetch_assoc($result)) {//results are in associative array. keys are cols names
+                echo '<section>
                     <div>
-                        <h3>&nbsp; French class</h3>
-                        <p><img class="lessonimage" src="images/frenchclass.png" alt="">
-                            Friday<br>12:30-14:00
-                            <br>
-                            &nbsp; &nbsp; &nbsp; &nbsp;
+                    <h3>&nbsp;'. $row["Name"] .'</h3>
+                    <p><img class="lessonimage" src="'. $row["Image"] .'" alt="">
+                    '. $row["Day"] .'<br>'. $row["StartTime"] .'-'. $row["EndTime"] .'
+                        <br>
+                        &nbsp; &nbsp; &nbsp; &nbsp;
 
-                            <a href="#"> <img src="images/info.png" alt="">
-                            </a>
-                            info
-                            <br>
-                            &nbsp; &nbsp; &nbsp;
+                        <a href="mainobject.php?ClassID='. $row["ClassID"] .'"> <img src="images/info.png" alt="">
+                        </a>
+                        info
+                        <br>
+                        &nbsp; &nbsp; &nbsp;
 
-                            <a href="#"> <img src="images/edit.png" alt="">
-                            </a>
-                            &nbsp; &nbsp; &nbsp;
-                            <a href="#" class="deleteitem"  > <img src="images/delete.png" alt="">
-                            </a>
-
-                            <br>
-                            &nbsp; &nbsp; &nbsp; edit &nbsp; &nbsp; delete
-                        </p>
-                    </div>
-
-                </section>
+                        <a href="#"> <img src="images/edit.png" alt="">
+                        </a>
+                        &nbsp; &nbsp; &nbsp;
+                         <a href="#" class="deleteitem"><img src="images/delete.png" alt=""></a>
+                        <br>
+                        &nbsp; &nbsp; &nbsp; edit &nbsp; &nbsp; delete
+                    </p>
+                </div>
+            </section>';} ?> 
             </div>
+            
+
         </div>
 
 
@@ -195,62 +163,38 @@
             <h2>3rd class</h2>
 
             <div>
-                <section>
+            <?php 
+                //get data from DB
+                $query 	= "SELECT * FROM tbl_classes_223 where Grade='3' and teacherID='$teacherIDForSql'";
+                $result = mysqli_query($connection, $query);
+                if(!$result) {
+                    die("DB query failed.");  } 
+                while($row = mysqli_fetch_assoc($result)) {//results are in associative array. keys are cols names
+                echo '<section>
                     <div>
-                        <h3>&nbsp; French class</h3>
-                        <p><img class="lessonimage" src="images/frenchclass.png" alt="">
-                            Thursday<br>12:30-14:00
-                            <br>
-                            &nbsp; &nbsp; &nbsp; &nbsp;
+                    <h3>&nbsp;'. $row["Name"] .'</h3>
+                    <p><img class="lessonimage" src="'. $row["Image"] .'" alt="">
+                    '. $row["Day"] .'<br>'. $row["StartTime"] .'-'. $row["EndTime"] .'
+                        <br>
+                        &nbsp; &nbsp; &nbsp; &nbsp;
 
-                            <a href="#"> <img src="images/info.png" alt="">
-                            </a>
-                            info
-                            <br>
-                            &nbsp; &nbsp; &nbsp;
+                        <a href="mainobject.php?ClassID='. $row["ClassID"] .'"> <img src="images/info.png" alt="">
+                        </a>
+                        info
+                        <br>
+                        &nbsp; &nbsp; &nbsp;
 
-                            <a href="#"> <img src="images/edit.png" alt="">
-                            </a>
-                            &nbsp; &nbsp; &nbsp;
-                            <a href="#" class="deleteitem"  > <img src="images/delete.png" alt="">
-                            </a>
-
-                            <br>
-                            &nbsp; &nbsp; &nbsp; edit &nbsp; &nbsp; delete
-                        </p>
-                    </div>
-                </section>
-
-
-                <section>
-                    <div>
-                        <h3>&nbsp; English class</h3>
-                        <p><img class="lessonimage" src="images/englishclass.png" alt="">
-                            Sunday<br>09:00-10:30
-                            <br>
-                            &nbsp; &nbsp; &nbsp; &nbsp;
-
-                            <a href="#"> <img src="images/info.png" alt="">
-                            </a>
-                            info
-                            <br>
-                            &nbsp; &nbsp; &nbsp;
-                            <a href="#"> <img src="images/edit.png" alt="">
-                            </a>
-                            &nbsp; &nbsp; &nbsp;
-                            <a href="#" class="deleteitem"  > <img src="images/delete.png" alt="">
-                            </a>
-                            <br>
-                            &nbsp; &nbsp; &nbsp; edit &nbsp; &nbsp; delete
-                        </p>
-                    </div>
-                </section>
+                        <a href="#"> <img src="images/edit.png" alt="">
+                        </a>
+                        &nbsp; &nbsp; &nbsp;
+                         <a href="#" class="deleteitem"><img src="images/delete.png" alt=""></a>
+                        <br>
+                        &nbsp; &nbsp; &nbsp; edit &nbsp; &nbsp; delete
+                    </p>
+                </div>
+            </section>';} ?> 
             </div>
         </div>
-
     </main>
-
-
 </body>
-
 </html>

@@ -1,3 +1,4 @@
+
 <?php
 
 include 'db.php';
@@ -22,7 +23,7 @@ $endTimeForSql = mysqli_real_escape_string($connection, $endTime);
 
 $timestamp = strtotime($date);
 $dayForSql = mysqli_real_escape_string($connection, date('l', $timestamp));
-
+$teacherIDForSql = mysqli_real_escape_string($connection,$_SESSION["usrID"]);
 
 
 
@@ -39,7 +40,7 @@ $query = "insert into tbl_classes_223(
     `AvatarChangeMode` ,
     `InteractionAllowed`
     )
-    values (NULL, '123','$nameForSql','$dayForSql','$startTimeForSql','$endTimeForSql','$classEnv','$gradeForSql','$avatarChange','1')";
+    values (NULL, '$teacherIDForSql','$nameForSql','$dayForSql','$startTimeForSql','$endTimeForSql','$classEnv','$gradeForSql','$avatarChange','1')";
 
 // $query = "INSERT INTO tbl_classes_223 (
 //     'TeacherID' ,
@@ -85,7 +86,7 @@ $result = mysqli_query($connection , $query);
         <input type="text" name="searchItems" id="searchBar" placeholder="Search students, classes, reports...">
         <button type="submit" value="Search" class="search-btn">Search</button>
         <div id="userData">
-            <p id="nameGreeting">Hello, <?php echo $_SESSION["usr"]?></p>
+        <p id="nameGreeting">Hello, <?php  echo $_SESSION["usrName"]?></p>
             <p id="time">07:52</p>
         </div>
 

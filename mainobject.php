@@ -6,14 +6,14 @@
 
     session_start();//on logout session_destroy();
 
-    if(isset($_GET["classID"])) { //true if form was submitted
+    if(isset($_GET["ClassID"])) { //true if form was submitted
         $query  = "SELECT * FROM tbl_classes_223 WHERE ClassID='" 
 
-        . $_GET["classID"] . "'" ;
+        . $_GET["ClassID"] . "'" ;
 
         // echo $query;//can't start echo if header comes after it
 
-   
+        
 
         $result = mysqli_query($connection , $query);
 
@@ -56,7 +56,7 @@
         <input type="text" name="searchItems" id="searchBar" placeholder="Search students, classes, reports...">
         <button type="submit" value="Search" class="search-btn">Search</button>
         <div id="userData">
-            <p id="nameGreeting">Hello, <?php echo $_SESSION["usr"]?></p>
+            <p id="nameGreeting">Hello, <?php echo $_SESSION["usrName"]?></p>
             <p id="time">07:52</p>
         </div>
 

@@ -4,11 +4,12 @@
     include "config.php";
 
     session_start();//on logout session_destroy();
-    // Checking if a user logged and a teacher
-    // if(!isset($_SESSION["usr"])) {
-    //     //Throw back to login page
-    //     header('Location: ' . URL . 'index.php');
-    // }
+    //Checking if a user logged and a teacher
+    if(!isset($_SESSION["usrID"])) {
+        
+        //Throw back to login page
+        header('Location: ' . URL . 'index.php');
+    }
 
 ?>
 
@@ -35,7 +36,7 @@
         <input type="text" name="searchItems" id="searchBar" placeholder="Search students, classes, reports...">
         <button type="submit" value="Search" class="search-btn">Search</button>
         <div id="userData">
-            <p id="nameGreeting">Hello, <?php echo $_SESSION["usr"]?></p>
+            <p id="nameGreeting">Hello, <?php echo $_SESSION["usrName"]?></p>
             <p id="time">07:52</p>
         </div>
 

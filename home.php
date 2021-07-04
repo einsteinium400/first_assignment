@@ -1,3 +1,6 @@
+<?php
+    session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -23,7 +26,7 @@
         <input type="text" name="searchItems" id="searchBar" placeholder="Search students, classes, reports...">
         <button type="submit" value="Search" class="search-btn">Search</button>
         <div id="userData">
-            <p id="nameGreeting">Hello, Ron Azulai</p>
+            <p id="nameGreeting">Hello, <?php  echo $_SESSION["usrName"]?></p>
             <p id="time">07:52</p>
         </div>
 

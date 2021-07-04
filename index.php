@@ -16,7 +16,10 @@
         $row    = mysqli_fetch_array($result);
      //   echo ($row);
         if(is_array($row)) {
-            echo 'Authentication success !';
+          session_start();
+          $_SESSION["usrID"] = $row["id"];
+          $_SESSION["usrName"] = $row["name"];
+          header('Location:home.php');
         } else {
             // echo 'Authentication failed !';
             $message = "Invalid username or password !";
