@@ -1,6 +1,6 @@
 <?php
 
-
+    include "db.php";
     include "config.php";
 
     session_start();//on logout session_destroy();
@@ -9,6 +9,44 @@
         
         //Throw back to login page
         header('Location: ' . URL . 'index.php');
+    }
+    $state = "add";
+    $name = "";
+    $grade = "";
+    $day = "";
+    $startTime = "";
+    $endTime = "";
+    $env = 0;
+    $inter = 0;
+    $avatar = 0;
+    $classID = "";
+    if(isset($_GET["ClassID"])) { //true if form was submitted
+        $query  = "SELECT * FROM tbl_classes_223 WHERE ClassID='" 
+
+        . $_GET["ClassID"] . "'" ;
+
+        // echo $query;//can't start echo if header comes after it
+
+        
+
+        $result = mysqli_query($connection , $query);
+
+        $row    = mysqli_fetch_array($result);
+        if(!is_array($row)) {
+
+            header('Location: ' . URL . 'classeslist.php');
+        }
+
+        $name = $row["Name"];
+        $grade = $row["Grade"];
+        $day = $row["Day"];
+        $startTime = $row["StartTime"];
+        $endTime = $row["EndTime"];
+        $env = $row["EnviormentType"];
+        $inter = $row["InteractionAllowed"];
+        $avatar = $row["AvatarChangeMode"];
+        $state = "edit";
+        $classID = $row["ClassID"];
     }
 
 ?>
@@ -27,6 +65,7 @@
     <link rel="stylesheet" href="css/general.css">
     <link rel="stylesheet" href="css/addform.css">
     <script src="js/general.js"></script>
+    <script src="js/addclass.js"></script>
     <title>Add new class</title>
 </head>
 
@@ -88,10 +127,10 @@
                 <form action="classAdded.php" method="GET" autocomplete="on" id="addNewClassForm">
                     <section class="bodyFormLeft">
                         <label class="normalLabel">
-                            Classroom name:<input type="text" name="className" class="basicInput" required>
+                            Classroom name:<input type="text" name="className" class="basicInput" value ="<?php echo $name ?>" required>
                         </label>
                         <label class="normalLabel">
-                            Grade:<select name="grade" class="basicInput">
+                            Grade:<select name="grade" class="basicInput" id="gradeSelector" data-selected = "<?php echo $grade ?>">
                                 <option value="1">1st</option>
                                 <option value="2">2nd</option>
                                 <option value="3">3rd</option>
@@ -111,22 +150,22 @@
                         </label>
                         <label class="normalLabel">
                             Start Time:<input type="datetime" name="startTime" class="basicInput"
-                                pattern="^([0-1]?[0-9]|2[0-3]):[0-5][0-9]$" required>
+                                pattern="^([0-1]?[0-9]|2[0-3]):[0-5][0-9]$" value ="<?php echo $startTime ?>" required>
                         </label>
                         <label class="normalLabel">
                             End Time:<input type="datetime" name="endTime" class="basicInput"
-                                pattern="^([0-1]?[0-9]|2[0-3]):[0-5][0-9]$" required>
+                                pattern="^([0-1]?[0-9]|2[0-3]):[0-5][0-9]$" value ="<?php echo $endTime ?>" required>
                         </label>
                         Enviroment:
                         <label class="normalLabel">
                             <div>
-                                <input type="radio" name="classEnv" value="0" checked="checked">Classroom
+                                <input class="envSelector" id="env0" type="radio" name="classEnv" value="0" data-selected="<?php echo $env ?>" >Classroom
                             </div>
                             <div>
-                                <input type="radio" name="classEnv" value="1">Labratory
+                                <input class="envSelector" id="env1" type="radio" name="classEnv" value="1">Labratory
                             </div>
                             <div>
-                                <input type="radio" name="classEnv" value="2">Outdoor
+                                <input class="envSelector" id="env2" type="radio" name="classEnv" value="2">Outdoor
                             </div>
                         </label>
                         <label class="normalLabel">
@@ -134,7 +173,7 @@
                             <button id="changeInteraction">Show</button>
                         </label>
                         <label class="normalLabel">
-                            Avatar change mode:<select name="avatarChange" class="basicInput">
+                            Avatar change mode:<select name="avatarChange" class="basicInput" id="avatarSelect" data-selected="<?php echo $avatar; ?>">
                                 <option value="0">Disable</option>
                                 <option value="1">Enable</option>
                             </select>
@@ -149,6 +188,8 @@
                             Upload files<i class="fas fa-folder-plus icon34"></i>
                         </label>
                         <div class="addBox addBoxFiles"></div>
+                        <input type = "hidden" name= "state" value="<?php echo $state; ?>">
+                        <input type = "hidden" name= "classID" value="<?php echo $classID; ?>">
                         <input type="submit" name="submit" class="submitBtn" value="Submit">
                     </section>
 

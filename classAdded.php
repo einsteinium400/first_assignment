@@ -26,36 +26,26 @@ $dayForSql = mysqli_real_escape_string($connection, date('l', $timestamp));
 $teacherIDForSql = mysqli_real_escape_string($connection,$_SESSION["usrID"]);
 
 
+if ($state == "add") {
+    $query = "insert into tbl_classes_223(
+        `ClassID` ,
+        `TeacherID` ,
+        `Name` ,
+        `Day` ,
+        `StartTime` ,
+        `EndTime` ,
+        `EnviormentType` ,
+        `Grade` ,
+        `AvatarChangeMode` ,
+        `InteractionAllowed`
+        )
+        values (NULL, '$teacherIDForSql','$nameForSql','$dayForSql','$startTimeForSql','$endTimeForSql','$classEnv','$gradeForSql','$avatarChange','1')";
+    ;
 
-//no session basic id for teacher
-$query = "insert into tbl_classes_223(
-    `ClassID` ,
-    `TeacherID` ,
-    `Name` ,
-    `Day` ,
-    `StartTime` ,
-    `EndTime` ,
-    `EnviormentType` ,
-    `Grade` ,
-    `AvatarChangeMode` ,
-    `InteractionAllowed`
-    )
-    values (NULL, '$teacherIDForSql','$nameForSql','$dayForSql','$startTimeForSql','$endTimeForSql','$classEnv','$gradeForSql','$avatarChange','1')";
-
-// $query = "INSERT INTO tbl_classes_223 (
-//     'TeacherID' ,
-//     'Name' ,
-//     'Day' ,
-//     'StartTime' ,
-//     'EndTime' ,
-//     'EnviormentType' ,
-//     'Grade' ,
-//     'AvatarChangeMode' ,
-//     'InteractionAllowed'
-//     )
-//     VALUES (
-//     '" . $_SESSION["usrID"] ."', '". $name ."', '". date('l', $timestamp) ."', '". $startTime ."', '". $endTime ."', '". $classEnv ."', '". $grade ."', '". $avatarChange."', '1'
-//     );";
+} else {
+    $id = mysqli_real_escape_string($connection, $_GET["classID"]);
+    $query = "update tbl_classes_223 set Grade='$gradeForSql',AvatarChangeMode='$avatarChange',Name='$nameForSql', Day='$dayForSql', startTime='$startTimeForSql',endTime='$endTimeForSql',EnviormentType='$classEnv' where id='$id'";
+}
 
 $result = mysqli_query($connection , $query);
 

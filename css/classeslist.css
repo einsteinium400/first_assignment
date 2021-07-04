@@ -1,5 +1,23 @@
+/* button{
+    background-repeat:no-repeat;
+    background-color: blueviolet;
+    border: none;
+} */
+
+.deleteBtn{
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
+} 
+
+
 /*Full screen + Tablet */
 @media only screen and (min-width:620px){
+
+
     main{
         display: flex;
         justify-content:space-between;
@@ -117,3 +135,4 @@
         position: relative;
     }
 }
+
