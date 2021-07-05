@@ -68,7 +68,7 @@
         width:300px;
         float:right;
         position: relative;
-        right: -180px;
+        /* right: -180px; */
     }
 }
 
