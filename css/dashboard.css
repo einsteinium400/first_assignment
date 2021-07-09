@@ -18,6 +18,11 @@ main>div>aside>p{
 }
 
 
+.modalbtn{
+    background-color: transparent;
+    height:40px;
+}
+
 #sideboxes{
     display: flex;
     flex-wrap: wrap;
