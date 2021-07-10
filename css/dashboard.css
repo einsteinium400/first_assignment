@@ -3,6 +3,23 @@
 }
 /* MAIN OBJECT PAGE */
 
+
+/* FIX UGLY MODAL COLOR */
+.editmodal{
+    height:10px;
+    position:relative;
+    background-color: transparent;
+    top: -30px;
+    left:15px;
+}
+
+.addmodal{
+    height:15px;
+    background-color: white;
+}
+/* FIX UGLY MODAL COLOR */
+
+
 aside{
     position: relative;
     font-size: 14px;
@@ -18,10 +35,9 @@ main>div>aside>p{
 }
 
 
-.modalbtn{
-    background-color: transparent;
-    height:40px;
-}
+/* .icon24{
+    display:inline;
+} */
 
 #sideboxes{
     display: flex;
@@ -166,8 +182,6 @@ main>div>aside>p{
     
 }
 
-
-
 /*Taskboard css attributes*/
 #taskBoard ul li,#pupilsAlerts ul li{
     width: 435px;
@@ -310,6 +324,8 @@ main>div>aside>p{
 /*Mobile */
 
 @media only screen and (max-width:620px){
+
+
 
     .mainArea{
         display: flexbox;
