@@ -13,3 +13,21 @@ function makeSelected () {
 $(function() {
     makeSelected();
  });
+
+
+ $( function() {
+    var availableTags = [
+        "Math",
+        "Geography",
+        "French",
+        "English",
+        "History",
+        "Computer science",
+        "C++",
+        "web engineering",
+
+    ];
+    $( "#tags" ).autocomplete({
+      source: availableTags
+    });
+  } );

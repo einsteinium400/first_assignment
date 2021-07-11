@@ -47,10 +47,12 @@ if (!$result) {
     <script src="js/general.js"></script>
     <script src="js/home.js"></script>
 
+
     <title>Dashboard</title>
 </head>
 
 <body>
+    
     <header class="wrapper">
         <a href="#" id="logo"></a>
         <input type="text" name="searchItems" id="searchBar" placeholder="Search students, classes, reports...">

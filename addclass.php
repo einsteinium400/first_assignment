@@ -68,6 +68,15 @@
     <script src="js/general.js"></script>
     <script src="js/addclass.js"></script>
     <title>Add new class</title>
+
+    <!-- word list -->
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+
+
 </head>
 
 <body>
@@ -127,8 +136,8 @@
                 <!--Place here the main content of the page-->
                 <form action="classAdded.php" method="GET" autocomplete="on" id="addNewClassForm">
                     <section class="bodyFormLeft">
-                        <label class="normalLabel">
-                            Classroom name:<input type="text" name="className" class="basicInput" value ="<?php echo $name ?>" required>
+                        <label for="tags" class="normalLabel">
+                            Classroom name:<input id="tags" type="text" name="className" class="basicInput" value ="<?php echo $name ?>" required>
                         </label>
                         <label class="normalLabel">
                             Grade:<select name="grade" class="basicInput" id="gradeSelector" data-selected = "<?php echo $grade ?>">
@@ -150,7 +159,7 @@
                             </div>
                         </label>
                         <label class="normalLabel">
-                            Start Time:<input type="datetime" name="startTime" class="basicInput timepicker"
+                            Start Time:<input type="datetime" name="startTime" class="basicInput"
                                 pattern="^([0-1]?[0-9]|2[0-3]):[0-5][0-9]$" value ="<?php echo $startTime ?>" required>
                         </label>
                         <label class="normalLabel">
