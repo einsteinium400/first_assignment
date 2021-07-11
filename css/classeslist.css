@@ -11,7 +11,19 @@
     cursor:pointer;
     overflow: hidden;
     outline:none;
+    /* position:relative; */
+    /* top:-25px; */
+    /* left:70px; */
 } 
+
+.bootstrap-iso{
+    /* margin:10px; */
+    display:inline;
+    position:relative; 
+    top:-25px;
+    left:70px;
+    background-color: transparent;
+}
 
 
 /*Full screen + Tablet */
@@ -65,10 +77,10 @@
     }
 
     #functionality{
-        width:300px;
+        width:120px;
         float:right;
         position: relative;
-        /* right: -180px; */
+        /* right: -60px; */
     }
 }
 
@@ -89,6 +101,7 @@
         left:20px;
         float:left;
         width: 80%;
+        /* top:-25px; */
     }
 
     main>div{

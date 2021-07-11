@@ -4,6 +4,49 @@
 /* MAIN OBJECT PAGE */
 
 
+.fa-edit{
+    position:relative;
+    top:5px;
+    left:-15px;
+}
+
+.fa-plus{
+    position:relative;
+    left:-30px;
+}
+
+.deletetask{
+    position:relative;
+    left:-30px;
+}
+
+.bootstrap-iso .submitbtn{
+    width:40px;
+}
+
+.bootstrap-iso .editmodal,.bootstrap-iso .addmodal{
+    background-color: transparent;
+    border-color: transparent;
+    width:0px;
+    height:0px;
+    padding:0px;
+    border:0px;
+
+}
+
+/* 
+.bootstrap-iso .editmodal:hover{
+    background-color: transparent;
+    border-color: transparent;
+} */
+
+/* .bootstrap-iso .btn-primary{
+    background-color: transparent;
+    border-color: transparent;
+} */
+
+
+
 /* FIX UGLY MODAL COLOR */
 .editmodal{
     height:10px;
