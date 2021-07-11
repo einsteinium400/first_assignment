@@ -6,13 +6,16 @@
 
 .fa-edit{
     position:relative;
-    top:5px;
+    top:-20px;
     left:-15px;
+
 }
 
 .fa-plus{
     position:relative;
     left:-30px;
+        top:-12px;
+
 }
 
 .deletetask{

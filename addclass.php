@@ -64,7 +64,6 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/general.css">
     <link rel="stylesheet" href="css/addform.css">
-    <script src="js/general.js"></script>
     <script src="js/addclass.js"></script>
     <title>Add new class</title>
 
@@ -117,6 +116,9 @@
         </a>
         <a href="#">
             <p>Settings</p>
+        </a>
+        <a href="index.php?logout=true" id="logout">
+            <p >Logout</p>
         </a>
     </nav>
 

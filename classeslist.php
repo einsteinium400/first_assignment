@@ -2,6 +2,12 @@
     include "db.php";
     include "config.php";
     session_start();
+    //Checking if a user logged and a teacher
+    if(!isset($_SESSION["usrID"])) {
+        
+        //Throw back to login page
+        header('Location: ' . URL . 'index.php');
+    }
     $teacherIDForSql = mysqli_real_escape_string($connection,$_SESSION["usrID"]);
 ?>
 
@@ -28,7 +34,6 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     
     
-    <script src="js/general.js"></script>
     <script src="js/classeslist.js"></script>
 
     <link rel="stylesheet" href="css/general.css">
@@ -74,6 +79,9 @@
         </a>
         <a href="#">
             <p>Settings</p>
+        </a>
+        <a href="index.php?logout=true" id="logout">
+            <p >Logout</p>
         </a>
     </nav>
 

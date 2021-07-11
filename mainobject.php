@@ -5,7 +5,12 @@
     include "config.php";
 
     session_start();//on logout session_destroy();
-
+    //Checking if a user logged and a teacher
+    if(!isset($_SESSION["usrID"])) {
+        
+        //Throw back to login page
+        header('Location: ' . URL . 'index.php');
+    }
     if(isset($_GET["ClassID"])) { //true if form was submitted
         $query  = "SELECT * FROM tbl_classes_223 WHERE ClassID='" 
 
@@ -46,7 +51,6 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/general.css">
     <link rel="stylesheet" href="css/mainobject.css">
-    <script src="js/general.js"></script>
     <script src="js/mainobject.js"></script>
 
 </head>
@@ -91,6 +95,9 @@
         </a>
         <a href="#">
             <p>Settings</p>
+        </a>
+        <a href="index.php?logout=true" id="logout">
+            <p>Logout</p>
         </a>
     </nav>
 

@@ -1,10 +1,11 @@
-
-
 <?php
     include 'db.php';
-    // include 'config.php';
-    define("URL", "http://localhost/tirgul13/");
-
+    include 'config.php';
+    session_start();
+    if( isset($_GET["logout"]))
+    {
+      session_destroy();
+    }
     if(isset($_POST["id"])) { // true if form was submitted
         $query  = "SELECT * FROM tbl_users_223 WHERE id='" 
                 . $_POST["id"] 
@@ -25,6 +26,7 @@
             $message = "Invalid username or password !";
         }
     }
+    
 ?>
 
 <!DOCTYPE html>

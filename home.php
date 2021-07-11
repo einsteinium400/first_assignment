@@ -2,6 +2,12 @@
 include "db.php";
 include "config.php";
 session_start();
+//Checking if a user logged and a teacher
+if(!isset($_SESSION["usrID"])) {
+        
+    //Throw back to login page
+    header('Location: ' . URL . 'index.php');
+}
 $teacherIDForSql = mysqli_real_escape_string($connection, $_SESSION["usrID"]);
 ?>
 
@@ -43,7 +49,6 @@ if (!$result) {
     </script>
 
     <!-- <script src="js/dashboardscript.js"></script> -->
-    <script src="js/general.js"></script>
     <script src="js/home.js"></script>
 
 
@@ -91,6 +96,9 @@ if (!$result) {
         </a>
         <a href="#">
             <p>Settings</p>
+        </a>
+        <a href="index.php?logout=true" id="logout">
+            <p >Logout</p>
         </a>
     </nav>
 

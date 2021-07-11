@@ -6,7 +6,12 @@ include 'db.php';
 include "config.php";
 
 session_start();//on logout session_destroy();
-
+//Checking if a user logged and a teacher
+if(!isset($_SESSION["usrID"])) {
+        
+    //Throw back to login page
+    header('Location: ' . URL . 'index.php');
+}
 $name = $_GET["className"];
 $grade = $_GET["grade"];
 $date = $_GET["date"];
@@ -96,10 +101,10 @@ $result = mysqli_query($connection , $query);
 
 
     <nav>
-        <a href="#" class="current">
+        <a href="home.php" >
             <p>Dashboard</p>
         </a>
-        <a href="classeslist.php">
+        <a href="classeslist.php" class="current">
             <p>Classes</p>
         </a>
         <a href="#">
@@ -110,6 +115,9 @@ $result = mysqli_query($connection , $query);
         </a>
         <a href="#">
             <p>Settings</p>
+        </a>
+        <a href="index.php?logout=true" id="logout">
+            <p >Logout</p>
         </a>
     </nav>
 
