@@ -20,6 +20,7 @@ $startTime = $_GET["startTime"];
 $endTime = $_GET["endTime"];
 $classEnv = $_GET["classEnv"];
 $avatarChange = $_GET["avatarChange"];
+$state = $_GET["state"];
 
 $nameForSql = mysqli_real_escape_string($connection, $name);
 $gradeForSql = mysqli_real_escape_string($connection, $grade);
