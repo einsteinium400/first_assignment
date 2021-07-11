@@ -198,7 +198,7 @@ if (!$result) {
                                             <div class="modal-body">
                                             
                                             <form action="savetask.php">
-                                            <label>Enter a new task:</label>
+                                            <label>Description:</label>
                                                 <input type=text name="description" value="' . $row['description'] . '">
                                             <input type="hidden" name="id" value="' . $row['id'] . '">
                                             <input type="hidden" name="state" value="update">

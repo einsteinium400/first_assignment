@@ -6,8 +6,6 @@ function AddStudents() {
 
     $.getJSON("json/students.json", function (data) {
         $.each(data.students, function (indxOfStudent, studentInfo) {
-            console.log(studentInfo.classeId.includes(classId));
-            console.log(studentInfo.classeId.includes(classIdStr));
             if (studentInfo.classeId.includes(classId)) {
                 sHTML = '<section class="listItem" id="' + studentInfo.Name + '">';
                 sHTML += '<img src="' + studentInfo.PhotoUrl + '" alt="' + studentInfo.Name + '" title="' + studentInfo.Name + '">';
@@ -18,7 +16,6 @@ function AddStudents() {
                 sHTML += '<option value="3">Three</option>';
                 sHTML += '</select>';
                 sHTML += '</section>';
-                console.log(sHTML)
                 $("#listofstudents").append(sHTML);
             }
         });

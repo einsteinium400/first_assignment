@@ -47,7 +47,6 @@ window.onload=function(){
         deletebtn[i].onclick=function(){
 
         var id=deletebtn[i].id;
-        console.log("Last deleted id sent is "+ id);
             $.ajax({
                 type: "POST",
                 url: "deletetask.php",
