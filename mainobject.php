@@ -44,9 +44,11 @@
     <title>ClassMates</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/general.css">
     <link rel="stylesheet" href="css/mainobject.css">
     <script src="js/general.js"></script>
+    <script src="js/mainobject.js"></script>
 
 </head>
 
@@ -129,48 +131,12 @@
 
         <section id="classroom"></section>
 
-        <section id="studentsinfo">
+        <section id="studentsinfo" data-classid="<?php echo $row["ClassID"]; ?>">
 
             <h2><?php echo $row["Name"] . " " . $row["Grade"] . " Grade Students"; ?></h2>
             
-            <div>
-                <section id="hilaisraeli">
-                    <img src="images/hilaisraeli.png" alt="Hila Israeli" title="Hila Israeli">
-                    <select class="studentSelect">
-                        <option selected>Hila Israeli</option>
-                        <option value="1">One</option>
-                        <option value="2">Two</option>
-                        <option value="3">Three</option>
-                    </select>
-                </section>
-
-                <section id="ilancohen">
-                    <img src="images/ilancohen.png" alt="Ilan Cohen" title="Ilan Cohen">
-                    <select class="studentSelect">
-                        <option selected>Ilan cohen</option>
-                        <option value="1">One</option>
-                        <option value="2">Two</option>
-                        <option value="3">Three</option>
-                    </select>
-                </section>
-
-                <section id="emilycohen">
-                    <img src="images/emilycohen.png" alt="Emily Cohen" title="Emily Cohen">
-                    <select class="studentSelect">
-                        <option selected>Emily Cohen</option>
-                        <option value="1">One</option>
-                        <option value="2">Two</option>
-                        <option value="3">Three</option>
-                    </select>
-                </section>
-            </div>
-
-            <div id="addstudent">
-                <section >
-                    <section class="newStudentSelect">
-                        <p>Add student</p>
-                    </section>
-                </section>
+            <div id="listofstudents" class= "container">
+                <!-- Students of the class -->
             </div>
         </section>
 
