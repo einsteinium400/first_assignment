@@ -143,5 +143,11 @@ $result = mysqli_query($connection , $query);
         </section>
     </main>
 </body>
+<?php
 
+//close DB connection
+
+mysqli_close($connection);
+
+?>
 </html>

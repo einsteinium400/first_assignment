@@ -158,11 +158,11 @@
                             </div>
                         </label>
                         <label class="normalLabel">
-                            Start Time:<input type="datetime" name="startTime" class="basicInput"
+                            Start Time:<input type="text" name="startTime" class="basicInput"
                                 pattern="^([0-1]?[0-9]|2[0-3]):[0-5][0-9]$" value ="<?php echo $startTime ?>" required>
                         </label>
                         <label class="normalLabel">
-                            End Time:<input type="datetime" name="endTime" class="basicInput"
+                            End Time:<input type="text" name="endTime" class="basicInput"
                                 pattern="^([0-1]?[0-9]|2[0-3]):[0-5][0-9]$" value ="<?php echo $endTime ?>" required>
                         </label>
                         Enviroment:
@@ -207,4 +207,11 @@
         </section>
     </main>
 </body>
+<?php
+
+//close DB connection
+
+mysqli_close($connection);
+
+?>
 </html>

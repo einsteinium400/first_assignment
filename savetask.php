@@ -21,6 +21,7 @@ if(!$result) {
     die("DB query failed.");
 }
 
+mysqli_close($connection);
 header("Location: home.php");
 exit();
 

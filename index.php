@@ -65,10 +65,16 @@
         </div>
 
         <div class="error-message"><?php if(isset($message)) { echo $message; } ?></div>
-        </div>
       </form>
 
   </main>
  
 </body>
+<?php
+
+//close DB connection
+
+mysqli_close($connection);
+
+?>
 </html>

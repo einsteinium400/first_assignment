@@ -141,10 +141,10 @@ if (!$result) {
                                                     data-dismiss="modal">Close</button>
                                                 <button type="submit" class="btn btn-primary">Save changes</button>
                                             </div>
-                                            </div>
+                                            
 
                                             </form>
-                                                
+                                            </div>   
  
                                         </div>
                                     </div>
@@ -181,7 +181,7 @@ if (!$result) {
                                     <div class="modal-dialog" role="document">
                                         <div class="modal-content">
                                             <div class="modal-header">
-                                                <h5 class="modal-title" id="exampleModalLabel">Edit task</h5>
+                                                <h5 class="modal-title" id="exampleModalLabel'. $row["id"]. '">Edit task</h5>
                                                 <button type="button" class="close" data-dismiss="modal"
                                                     aria-label="Close">
                                                     <span aria-hidden="true">&times;</span>
@@ -200,11 +200,11 @@ if (!$result) {
                                                     data-dismiss="modal">Close</button>
                                                 <button type="submit" class="btn btn-primary">Save changes</button>
                                             </div>
-                                            </div>
+                                            
 
                                             </form>
                                                 
- 
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -291,5 +291,11 @@ if (!$result) {
         </section>
     </main>
 </body>
+<?php
 
+//close DB connection
+
+mysqli_close($connection);
+
+?>
 </html>
