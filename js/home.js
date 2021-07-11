@@ -1,26 +1,51 @@
+// Comparing based on the description
+function compare_items_by_desc(a, b){
+    if($(a).data("desc").toLowerCase() < $(b).data("desc").toLowerCase()){
+            return -1;
+    // a should come after b in the sorted order
+    }else if($(a).data("desc").toLowerCase() > $(b).data("desc").toLowerCase()){
+            return 1;
+    // and and b are the same
+    }else{
+            return 0;
+    }
+}
+function SortTasks()
+{
+    listItems = $(".itemListForSort");
 
-
+    listItems.sort(compare_items_by_desc);
+    $(".itemListForSort").remove();
+    for(let i = 0; i<listItems.length; i++)
+    {
+        $("#taskBoardList").append(listItems[i]);
+    }
+}
 
 window.onload=function(){
+    SortTasks();
+
 
     var deletebtn=document.getElementsByClassName("deletetask");
-    console.log(deletebtn.length);
 
     for (let i=0;i<deletebtn.length;i++)
     {
         deletebtn[i].onclick=function(){
 
         var id=deletebtn[i].id;
+        console.log("Last deleted id sent is "+ id);
             $.ajax({
                 type: "POST",
                 url: "deletetask.php",
                 data: { id: id }
               }).done(function( ) {
-                location.reload();
+                //location.reload();
             });
 
         };
     }
+
+
 
 }
 

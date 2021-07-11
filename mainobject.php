@@ -11,7 +11,6 @@
 
         . $_GET["ClassID"] . "'" ;
 
-        // echo $query;//can't start echo if header comes after it
 
         
 

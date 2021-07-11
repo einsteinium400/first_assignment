@@ -8,7 +8,6 @@ $teacherIDForSql = mysqli_real_escape_string($connection, $_SESSION["usrID"]);
 <?php
 // get all data from DB
 $query = "SELECT * FROM tbl_tasts_223 where user_id=$teacherIDForSql";
-echo $query;
 $result = mysqli_query($connection, $query);
 if (!$result) {
     die("DB query failed.");
@@ -106,7 +105,7 @@ if (!$result) {
 
                 <!--Place here the main content of the page-->
                 <div id="taskBoard">
-                    <ul>
+                    <ul id="taskBoardList">
                         <li class="boardHeadline">
                             <h2>Tasks Board</h2>
                             <!-- Bootstrap css layout isolation end, wrap start -->
@@ -157,14 +156,14 @@ if (!$result) {
                             <!-- <i class="fas fa-plus icon34"></i> -->
                         </li>
 
-                
+                        <!-- START OF ITEMS DYNAMICLY -->
                         <?php
-                        echo '<div class="row">';
+                        //echo '<div class="row">';
                         while ($row = mysqli_fetch_assoc($result)) {
                             //output data from each row
-                            echo '<li class="alert">
+                            echo '<li class="alert itemListForSort" data-desc="' . $row['description'] .'">
                             <div>' . $row['description'] . '</div>
-                            <div><i id=' . $row['id'] . ' class="deletetask fas fa-check icon24"></i>
+                            <div><i id="' . $row['id'] . '" class="deletetask fas fa-check icon24"></i>
 
 
                             <!-- Bootstrap css layout isolation end, wrap start -->
@@ -219,12 +218,8 @@ if (!$result) {
                             </div>
                             </li>';
                         }
-                        echo '</div>';
+                        //echo '</div>';
                         ?>
-
-                        <li>
-                            <a href="#" class="viewMore">View more</a>
-                        </li>
                     </ul>
                 </div>
                 <div id="pupilsAlerts">
