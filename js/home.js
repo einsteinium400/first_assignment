@@ -39,7 +39,7 @@ window.onload=function(){
                 url: "deletetask.php",
                 data: { id: id }
               }).done(function( ) {
-                //location.reload();
+                location.reload();
             });
 
         };
