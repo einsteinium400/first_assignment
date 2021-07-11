@@ -104,11 +104,13 @@
                 if(!$result) {
                     die("DB query failed.");  } 
                 while($row = mysqli_fetch_assoc($result)) {//results are in associative array. keys are cols names
+                    $new_start_time = date('H:i', strtotime($row["StartTime"])); //Time Convertion
+                    $new_end_time = date('H:i', strtotime($row["EndTime"])); //Time Convertion
                 echo '<section>
                     <div>
                     <h3>&nbsp;'. $row["Name"] .'</h3>
                     <p><img class="lessonimage" src="'. $row["Image"] .'" alt="">
-                    '. $row["Day"] .'<br>'. $row["StartTime"] .'-'. $row["EndTime"] .'
+                    '. $row["Day"] .'<br>'. $new_start_time .'-'. $new_end_time .'
                         <br>
                         &nbsp; &nbsp; &nbsp; &nbsp;
 
@@ -118,7 +120,7 @@
                         <br>
                         &nbsp; &nbsp; &nbsp;
 
-                        <a href="#"> <img src="images/edit.png" alt="">
+                        <a href="addclass.php?ClassID='. $row["ClassID"] .'"> <img src="images/edit.png" alt="">
                         </a>
                         &nbsp; &nbsp; &nbsp;
                          
@@ -163,11 +165,13 @@
                 if(!$result) {
                     die("DB query failed.");  } 
                 while($row = mysqli_fetch_assoc($result)) {//results are in associative array. keys are cols names
+                    $new_start_time = date('H:i', strtotime($row["StartTime"])); //Time Convertion
+                    $new_end_time = date('H:i', strtotime($row["EndTime"])); //Time Convertion
                 echo '<section>
                     <div>
                     <h3>&nbsp;'. $row["Name"] .'</h3>
                     <p><img class="lessonimage" src="'. $row["Image"] .'" alt="">
-                    '. $row["Day"] .'<br>'. $row["StartTime"] .'-'. $row["EndTime"] .'
+                    '. $row["Day"] .'<br>'. $new_start_time .'-'. $new_end_time .'
                         <br>
                         &nbsp; &nbsp; &nbsp; &nbsp;
 
@@ -177,7 +181,7 @@
                         <br>
                         &nbsp; &nbsp; &nbsp;
 
-                        <a href="#"> <img src="images/edit.png" alt="">
+                        <a href="addclass.php?ClassID='. $row["ClassID"] .'"> <img src="images/edit.png" alt="">
                         </a>
                         &nbsp; &nbsp; &nbsp;
                          
@@ -226,11 +230,13 @@
                 if(!$result) {
                     die("DB query failed.");  } 
                 while($row = mysqli_fetch_assoc($result)) {//results are in associative array. keys are cols names
+                    $new_start_time = date('H:i', strtotime($row["StartTime"])); //Time Convertion
+                    $new_end_time = date('H:i', strtotime($row["EndTime"])); //Time Convertion
                 echo '<section>
                     <div>
                     <h3>&nbsp;'. $row["Name"] .'</h3>
                     <p><img class="lessonimage" src="'. $row["Image"] .'" alt="">
-                    '. $row["Day"] .'<br>'. $row["StartTime"] .'-'. $row["EndTime"] .'
+                    '. $row["Day"] .'<br>'. $new_start_time .'-'. $new_end_time .'
                         <br>
                         &nbsp; &nbsp; &nbsp; &nbsp;
 
@@ -240,7 +246,7 @@
                         <br>
                         &nbsp; &nbsp; &nbsp;
 
-                        <a href="#"> <img src="images/edit.png" alt="">
+                        <a href="addclass.php?ClassID='. $row["ClassID"] .'"> <img src="images/edit.png" alt="">
                         </a>
                         &nbsp; &nbsp; &nbsp;
                          

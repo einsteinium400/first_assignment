@@ -10,6 +10,6 @@ function makeSelected () {
     ind = selectObj.dataset.selected;
     document.getElementById("env"+ind).checked = true;
 }
-window.onload = function init() {
+$(function() {
     makeSelected();
-}
+ });

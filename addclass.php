@@ -62,6 +62,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/general.css">
     <link rel="stylesheet" href="css/addform.css">
     <script src="js/general.js"></script>
@@ -94,10 +95,10 @@
 
 
     <nav>
-        <a href="home.html" class="current">
+        <a href="home.php" class="current">
             <p>Dashboard</p>
         </a>
-        <a href="classeslist.html">
+        <a href="classeslist.php">
             <p>Classes</p>
         </a>
         <a href="#">
@@ -149,7 +150,7 @@
                             </div>
                         </label>
                         <label class="normalLabel">
-                            Start Time:<input type="datetime" name="startTime" class="basicInput"
+                            Start Time:<input type="datetime" name="startTime" class="basicInput timepicker"
                                 pattern="^([0-1]?[0-9]|2[0-3]):[0-5][0-9]$" value ="<?php echo $startTime ?>" required>
                         </label>
                         <label class="normalLabel">
