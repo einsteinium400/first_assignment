@@ -50,7 +50,7 @@ if ($state == "add") {
 
 } else {
     $id = mysqli_real_escape_string($connection, $_GET["classID"]);
-    $query = "update tbl_classes_223 set Grade='$gradeForSql',AvatarChangeMode='$avatarChange',Name='$nameForSql', Day='$dayForSql', startTime='$startTimeForSql',endTime='$endTimeForSql',EnviormentType='$classEnv' where id='$id'";
+    $query = "update tbl_classes_223 set Grade='$gradeForSql',AvatarChangeMode='$avatarChange',Name='$nameForSql', Day='$dayForSql', startTime='$startTimeForSql',endTime='$endTimeForSql',EnviormentType='$classEnv' where ClassID='$id'";
 }
 
 $result = mysqli_query($connection , $query);

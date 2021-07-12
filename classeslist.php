@@ -94,9 +94,12 @@
 
     <div id="functionality">
         <p>
-            <a href="addclass.php"> <img src="images/add.png" alt="">
-            </a>
-            Add
+            <?php 
+                if($_SESSION["Type"] == 0)
+                {
+                    echo '<a href="addclass.php"> <img src="images/add.png" alt="">Add</a>';
+                }
+            ?>
             <a href="#"> <img src="images/listview.png" alt="">
             </a>
         </p>
@@ -109,7 +112,14 @@
             <div>
             <?php 
                 //get data from DB
-                $query 	= "SELECT * FROM tbl_classes_223 where Grade='1' and teacherID='$teacherIDForSql'";
+                if($_SESSION["Type"] == 1)
+                {
+                    $query 	= "SELECT * FROM tbl_classes_223 where Grade='1'";
+                }
+                else
+                {
+                    $query 	= "SELECT * FROM tbl_classes_223 where Grade='1' and teacherID='$teacherIDForSql'";
+                }
                 $result = mysqli_query($connection, $query);
                 if(!$result) {
                     die("DB query failed.");  } 
@@ -171,7 +181,14 @@
             <div>
             <?php 
                 //get data from DB
-                $query 	= "SELECT * FROM tbl_classes_223 where Grade='2' and teacherID='$teacherIDForSql'";
+                if($_SESSION["Type"] == 1)
+                {
+                    $query 	= "SELECT * FROM tbl_classes_223 where Grade='2'";
+                }
+                else
+                {
+                    $query 	= "SELECT * FROM tbl_classes_223 where Grade='2' and teacherID='$teacherIDForSql'";
+                }
                 $result = mysqli_query($connection, $query);
                 if(!$result) {
                     die("DB query failed.");  } 
@@ -238,7 +255,14 @@
             <div>
             <?php 
                 //get data from DB
-                $query 	= "SELECT * FROM tbl_classes_223 where Grade='3' and teacherID='$teacherIDForSql'";
+                if($_SESSION["Type"] == 1)
+                {
+                    $query 	= "SELECT * FROM tbl_classes_223 where Grade='3'";
+                }
+                else
+                {
+                    $query 	= "SELECT * FROM tbl_classes_223 where Grade='3' and teacherID='$teacherIDForSql'";
+                }
                 $result = mysqli_query($connection, $query);
                 if(!$result) {
                     die("DB query failed.");  } 

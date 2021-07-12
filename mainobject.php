@@ -127,6 +127,16 @@
                     classrom enviornment: <?php echo enviormentTypeArray[$row["EnviormentType"]]; ?><br>
                     interaction: <?php echo allowedArray[$row["InteractionAllowed"]]; ?><br>
                     avatar change: <?php echo allowedArray[$row["AvatarChangeMode"]]; ?><br>
+                    <?php 
+                        if($_SESSION["Type"] == 1)
+                        {
+                            $query2  = "SELECT * FROM tbl_users_223 WHERE id='". $row["TeacherID"] . "'" ;
+                            $result2 = mysqli_query($connection , $query2);
+                            $row2    = mysqli_fetch_array($result2);
+
+                            echo "Teacher Name: ". $row2["name"] ."<br>";
+                        }
+                    ?>
                 </p>
             </aside>
             <aside>

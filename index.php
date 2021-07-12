@@ -20,6 +20,7 @@
           session_start();
           $_SESSION["usrID"] = $row["id"];
           $_SESSION["usrName"] = $row["name"];
+          $_SESSION["Type"] = $row["type"];
           header('Location:home.php');
         } else {
             // echo 'Authentication failed !';

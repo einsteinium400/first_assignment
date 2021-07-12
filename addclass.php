@@ -39,8 +39,8 @@
         $name = $row["Name"];
         $grade = $row["Grade"];
         $day = $row["Day"];
-        $startTime = $row["StartTime"];
-        $endTime = $row["EndTime"];
+        $startTime = date('H:i',strtotime($row["StartTime"]));
+        $endTime = date('H:i',strtotime($row["EndTime"]));
         $env = $row["EnviormentType"];
         $inter = $row["InteractionAllowed"];
         $avatar = $row["AvatarChangeMode"];
